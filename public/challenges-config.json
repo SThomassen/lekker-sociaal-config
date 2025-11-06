@@ -1,0 +1,122 @@
+{
+  "code": [
+    "Make a game mechanic with only one button",
+    "Recreate Pong in 10 lines of code",
+    "Build a calculator that only uses addition",
+    "Create a text-based adventure game",
+    "Make a program that generates random poetry",
+    "Build a simple chat bot",
+    "Create a pixel art generator",
+    "Make a password strength checker",
+    "Build a todo list with categories",
+    "Create a random quote generator"
+  ],
+  "draw": [
+    "Draw a pirate with a robot parrot",
+    "Design a creature made of clouds",
+    "Sketch your dream house",
+    "Draw a superhero with an unusual power",
+    "Create a character that represents your mood today",
+    "Design a logo for a space restaurant",
+    "Draw a scene from inside a snow globe",
+    "Sketch a robot learning to paint",
+    "Create a fantasy map of your neighborhood",
+    "Draw a character made entirely of food"
+  ],
+  "3d": [
+    "Model a futuristic coffee mug",
+    "Create a low-poly tree",
+    "Design a spaceship cockpit",
+    "Model a magical crystal",
+    "Create a stylized animal character",
+    "Design a sci-fi door",
+    "Model a floating island",
+    "Create a retro game console",
+    "Design a fantasy weapon",
+    "Model a cozy reading nook"
+  ],
+  "music": [
+    "Compose a song using only 3 notes",
+    "Create a beat using household items",
+    "Write lyrics about your favorite color",
+    "Make a melody that sounds like rain",
+    "Compose a theme song for a superhero",
+    "Create a song using only your voice",
+    "Write a lullaby for robots",
+    "Make music that represents different emotions",
+    "Compose a song about space exploration",
+    "Create a beat using nature sounds"
+  ],
+  "writing": [
+    "Write a story where the villain is actually right",
+    "Create a character who can only speak in questions",
+    "Write a poem about your favorite smell",
+    "Tell a story from the perspective of a house",
+    "Write a letter to your future self",
+    "Create a dialogue between two inanimate objects",
+    "Write a story that takes place in one minute",
+    "Tell a tale about a time traveler who can only go backwards",
+    "Write a story where colors have personalities",
+    "Create a character who collects unusual things"
+  ],
+  "photo": [
+    "Take a photo that tells a story without words",
+    "Capture something beautiful in an unexpected place",
+    "Photograph the same object from 5 different angles",
+    "Take a photo that represents \"hope\"",
+    "Capture a moment of pure joy",
+    "Photograph something that makes you nostalgic",
+    "Take a photo using only natural light",
+    "Capture a reflection that creates an illusion",
+    "Photograph something that represents your personality",
+    "Take a photo that shows movement in a creative way"
+  ],
+  "design": [
+    "Design a poster for a movie that doesn't exist",
+    "Create a logo for a time travel company",
+    "Design a book cover for your autobiography",
+    "Create a business card for a superhero",
+    "Design a menu for a restaurant on Mars",
+    "Create a flyer for a concert by aliens",
+    "Design a package for invisible products",
+    "Create a poster for a silent movie",
+    "Design a business card for a professional daydreamer",
+    "Create a logo for a company that sells nothing"
+  ],
+  "animation": [
+    "Animate a character blinking",
+    "Create a bouncing ball with personality",
+    "Animate a flower blooming in fast motion",
+    "Make a character walk in a loop",
+    "Animate a clock ticking backwards",
+    "Create a simple explosion effect",
+    "Animate a character changing emotions",
+    "Make a character wave hello",
+    "Animate a door opening and closing",
+    "Create a simple particle effect"
+  ],
+  "game": [
+    "Design a game where you can only move diagonally",
+    "Create a puzzle game using only circles",
+    "Design a game where the goal is to lose",
+    "Make a game that can be played with one hand",
+    "Create a game where gravity changes direction",
+    "Design a game using only two colors",
+    "Make a game where you play as the environment",
+    "Create a game that teaches something useful",
+    "Design a game where time moves backwards",
+    "Make a game that can be completed in 30 seconds"
+  ],
+  "craft": [
+    "Make something useful from cardboard",
+    "Create art using only recycled materials",
+    "Build a miniature version of your room",
+    "Make a gift for someone using only paper",
+    "Create something that makes you smile",
+    "Build a model of your dream vehicle",
+    "Make a decoration for your workspace",
+    "Create something inspired by nature",
+    "Build a simple musical instrument",
+    "Make something that represents your favorite memory"
+  ]
+}

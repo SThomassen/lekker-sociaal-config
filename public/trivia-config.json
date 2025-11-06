@@ -1,0 +1,100 @@
+{
+  "questions": [
+    {
+      "id": "q001",
+      "question": "What is the capital of France?",
+      "options": ["London", "Paris", "Berlin", "Madrid"],
+      "correct_answer": 1,
+      "category": "geography",
+      "difficulty": "easy",
+      "explanation": "Paris has been the capital of France since the 6th century."
+    },
+    {
+      "id": "q002",
+      "question": "Who painted the Mona Lisa?",
+      "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+      "correct_answer": 2,
+      "category": "entertainment",
+      "difficulty": "easy",
+      "explanation": "Leonardo da Vinci painted the Mona Lisa between 1503-1519."
+    },
+    {
+      "id": "q003",
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Earth", "Saturn", "Jupiter", "Neptune"],
+      "correct_answer": 2,
+      "category": "science",
+      "difficulty": "easy",
+      "explanation": "Jupiter is the largest planet in our solar system by both mass and volume."
+    },
+    {
+      "id": "q004",
+      "question": "In which year did World War II end?",
+      "options": ["1944", "1945", "1946", "1947"],
+      "correct_answer": 1,
+      "category": "history",
+      "difficulty": "medium",
+      "explanation": "World War II ended in 1945 with the surrender of Japan on September 2."
+    },
+    {
+      "id": "q005",
+      "question": "What does CPU stand for?",
+      "options": ["Central Processing Unit", "Computer Processing Unit", "Central Program Unit", "Computer Program Unit"],
+      "correct_answer": 0,
+      "category": "technology",
+      "difficulty": "medium",
+      "explanation": "CPU stands for Central Processing Unit, the main processor of a computer."
+    },
+    {
+      "id": "q006",
+      "question": "Which country won the FIFA World Cup in 2018?",
+      "options": ["Germany", "Brazil", "France", "Argentina"],
+      "correct_answer": 2,
+      "category": "sports",
+      "difficulty": "easy",
+      "explanation": "France won the FIFA World Cup in 2018, defeating Croatia 4-2 in the final."
+    },
+    {
+      "id": "q007",
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Go", "Gd", "Au", "Ag"],
+      "correct_answer": 2,
+      "category": "science",
+      "difficulty": "medium",
+      "explanation": "Au is the chemical symbol for gold, derived from the Latin word 'aurum'."
+    },
+    {
+      "id": "q008",
+      "question": "Who wrote '1984'?",
+      "options": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "H.G. Wells"],
+      "correct_answer": 0,
+      "category": "entertainment",
+      "difficulty": "medium",
+      "explanation": "George Orwell wrote '1984', published in 1949."
+    },
+    {
+      "id": "q009",
+      "question": "What is the smallest country in the world?",
+      "options": ["Monaco", "Vatican City", "Liechtenstein", "San Marino"],
+      "correct_answer": 1,
+      "category": "geography",
+      "difficulty": "hard",
+      "explanation": "Vatican City is the smallest country in the world by both area and population."
+    },
+    {
+      "id": "q010",
+      "question": "In which programming language was the original Linux kernel written?",
+      "options": ["C", "Assembly", "C++", "Python"],
+      "correct_answer": 0,
+      "category": "technology",
+      "difficulty": "hard",
+      "explanation": "The original Linux kernel was written in C by Linus Torvalds."
+    }
+  ],
+  "daily_questions": {
+    "current_date": "",
+    "current_question_id": "",
+    "posted_at": 0,
+    "answered_by": []
+  }
+}

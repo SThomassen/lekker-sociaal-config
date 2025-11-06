@@ -1,0 +1,35 @@
+{
+  "active_jams": {},
+  "completed_jams": {},
+  "default_themes": [
+    "Retro",
+    "Space",
+    "Underwater",
+    "Time Travel",
+    "Magic",
+    "Steampunk",
+    "Post-Apocalyptic",
+    "Fantasy",
+    "Sci-Fi",
+    "Horror",
+    "Comedy",
+    "Mystery",
+    "Adventure",
+    "Puzzle",
+    "Platformer",
+    "RPG",
+    "Strategy",
+    "Simulation",
+    "Arcade",
+    "Racing"
+  ],
+  "suggested_themes": {
+    "default": [],
+    "halloween": [],
+    "christmas": [],
+    "summer": [],
+    "retro": [],
+    "fantasy": [],
+    "scifi": []
+  }
+}
