@@ -1,4 +1,10 @@
 import { SanitizationConfig } from "./sanitazion";
+import { TriviaConfig } from "../trivia";
+import { GameJamConfig } from "../gamejam";
+import { ChallengeConfig } from "../challenges";
+import { LostGameConfig } from "../lostGame";
+import { MediaConfig } from "../media";
+import { MediaTypeConfig } from "../media";
 
 // Bot Configuration Types
 export interface CommandConfig {
@@ -6,78 +12,6 @@ export interface CommandConfig {
     permissions: string[];
     allowed_channels: string[]; // empty = all channels
     ephemeral?: boolean;
-}
-
-export interface LostGameConfig {
-    trigger: CommandConfig & {
-        cooldown: number; // in milliseconds
-        custom_message: string;
-        reaction_emoji: string;
-        timeout_seconds?: number; // 0 = permanent, > 0 = temporary (auto-delete after X seconds)
-    };
-    leaderboard: CommandConfig & {
-        max_entries: number;
-    };
-    stats: CommandConfig & {
-        show_user_triggers: boolean;
-    };
-    message_detection: {
-        enable: boolean;
-        channel: string;
-        mention_user: boolean;
-        custom_message: string;
-        cooldown: number; // in milliseconds
-        reaction_emoji: string;
-        timeout_seconds?: number; // 0 = permanent, > 0 = temporary (auto-delete after X seconds)
-    };
-}
-
-export interface MediaCommandConfig extends CommandConfig {
-    reward_bonus_per_channel?: { [channelName: string]: number };
-    reward_bonus_per_role?: { [roleName: string]: number };
-    max_results?: number;
-    items_per_page?: number;
-    show_filters?: boolean;
-    require_approval?: boolean;
-    max_items_per_user?: number;
-    allow_self_removal?: boolean;
-    allow_self_update?: boolean;
-    auto_detection?: {
-        enable: boolean;
-        min_confidence: number;
-        platforms: {
-            youtube: boolean;
-            spotify: boolean;
-            imdb: boolean;
-            steam: boolean;
-        };
-    };
-}
-
-export interface MediaConfig {
-    add_item: MediaCommandConfig;
-    remove_item: MediaCommandConfig;
-    update_item: MediaCommandConfig;
-    get: MediaCommandConfig;
-    list: MediaCommandConfig;
-    random: MediaCommandConfig;
-    id: MediaCommandConfig;
-    stats: MediaStatsConfig;
-}
-
-export interface MediaTypeConfig {
-    name: string;
-    emoji: string;
-    color: number;
-    thumbnail: string;
-    collectionKey: string;
-    modalId: string;
-    showCreatorInTitle: boolean;
-    fields: {
-        title: string;
-        creator?: string;
-        genre?: string;
-    };
 }
 
 export interface XPSystemConfig {
@@ -145,13 +79,6 @@ export interface SocialConfig {
     };
 }
 
-export interface MediaStatsConfig extends CommandConfig {
-    show_total_items: boolean;
-    show_category_breakdown: boolean;
-    show_top_contributors: boolean;
-    max_contributors: number;
-}
-
 export interface GeneralConfig {
     prefix: string;
     language: string;
@@ -200,68 +127,6 @@ export interface StylingConfig {
     font: string;
 }
 
-export interface TriviaCategoryConfig {
-    name: string;
-    emoji: string;
-    weight: number;
-}
-
-export interface TriviaConfig {
-    enable: boolean;
-    daily_question: CommandConfig & {
-        xp_reward: number;
-        time_limit_seconds: number;
-        post_time: string;
-        timezone: string;
-        auto_post: boolean;
-        channel: string;
-    };
-    question: CommandConfig & {
-        xp_reward: number;
-        time_limit_seconds: number;
-        cooldown_seconds: number;
-    };
-    leaderboard: CommandConfig & {
-        max_entries: number;
-        show_avatars: boolean;
-        time_periods: string[];
-    };
-    stats: CommandConfig & {
-        show_streak: boolean;
-        show_accuracy: boolean;
-        show_total_questions: boolean;
-    };
-    categories: { [category: string]: TriviaCategoryConfig };
-    difficulty_multipliers: {
-        easy: number;
-        medium: number;
-        hard: number;
-    };
-    streak_bonuses: {
-        enable: boolean;
-        bonus_xp_per_streak: number;
-        max_streak_bonus: number;
-    };
-}
-
-export interface GameJamConfig {
-    enable: boolean;
-    start: CommandConfig & {
-        announcement_channel: string;
-        max_duration_days: number;
-        min_duration_days: number;
-        default_theme_pool: string; // Which theme pool to use by default
-    };
-    status: CommandConfig;
-    join: CommandConfig;
-    end: CommandConfig & {
-        permissions: string[];
-    };
-    suggest_theme: CommandConfig & {
-        pool: string; // Which pool to add suggestions to
-    };
-}
-
 export interface MusicMondayConfig {
     enable: boolean;
     channel: string;
@@ -284,12 +149,6 @@ export interface MusicMondayConfig {
     };
 }
 
-export interface ChallengeConfig {
-    get: CommandConfig;
-    random: CommandConfig;
-    categories: { [category: string]: any };
-    admin: CommandConfig;
-}
 
 export interface BotConfig {
     lost_game: LostGameConfig;

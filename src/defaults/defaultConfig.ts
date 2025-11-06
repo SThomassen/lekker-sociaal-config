@@ -1,4 +1,4 @@
-import { BotConfig } from "./botConfig";
+import { BotConfig } from "../core/botConfig";
 
 // Default configuration
 export const defaultBotConfig: BotConfig = {

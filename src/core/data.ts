@@ -51,25 +51,3 @@ export interface UsersData {
     users: { [userId: string]: CombinedUserData };
 }
 
-export interface GameJamData {
-    id: string;
-    name: string;
-    description: string;
-    theme: string;
-    duration: number; // in days
-    startTime: number; // timestamp
-    endTime: number; // timestamp
-    createdBy: string; // user ID
-    createdByUsername: string;
-    participants: string[]; // user IDs
-    status: 'active' | 'completed' | 'cancelled';
-    scheduledEventId?: string; // Discord scheduled event ID
-    announcementMessageId?: string; // Discord message ID
-    announcementChannelId?: string; // Discord channel ID
-}
-
-export interface GameJamStorage {
-    active_jams: { [jamId: string]: GameJamData };
-    completed_jams: { [jamId: string]: GameJamData };
-    suggested_themes: { [poolName: string]: string[] }; // Multiple suggestion pools
-}
