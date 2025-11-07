@@ -1,0 +1,54 @@
+import { TriviaConfig } from "./trivia.types";
+
+export const defaultTriviaConfig: TriviaConfig = {
+    enable: true,
+    daily_question: {
+        enable: true,
+        permissions: ['@everyone'],
+        allowed_channels: [],
+        ephemeral: false,
+        xp_reward: 100,
+        time_limit_seconds: 30,
+        post_time: '12:00',
+        timezone: 'Europe/Amsterdam',
+        auto_post: true,
+        channel: 'general'
+    },
+    question: {
+        enable: true,
+        permissions: ['@everyone'],
+        allowed_channels: [],
+        ephemeral: false,
+        xp_reward: 50,
+        time_limit_seconds: 30,
+        cooldown_seconds: 60
+    },
+    leaderboard: {
+        enable: true,
+        permissions: ['@everyone'],
+        allowed_channels: [],
+        ephemeral: true,
+        max_entries: 10,
+        show_avatars: true,
+        time_periods: ['daily', 'weekly', 'monthly', 'all_time']
+    },
+    stats: {
+        enable: true,
+        permissions: ['@everyone'],
+        allowed_channels: [],
+        ephemeral: true,
+        show_streak: true,
+        show_accuracy: true,
+        show_total_questions: true
+    },
+    difficulty_multipliers: {
+        easy: 1,
+        medium: 1.5,
+        hard: 2
+    },
+    streak_bonuses: {
+        enable: true,
+        bonus_xp_per_streak: 10,
+        max_streak_bonus: 200
+    }
+}   
