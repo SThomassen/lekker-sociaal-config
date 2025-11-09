@@ -1,4 +1,4 @@
-import { CommandConfig } from "../core/botConfig";
+import { CommandConfig } from "../command/command.types";
 
 export interface GameConfig {
     trigger: CommandConfig & {
@@ -22,5 +22,23 @@ export interface GameConfig {
         cooldown: number; // in milliseconds
         reaction_emoji: string;
         timeout_seconds?: number; // 0 = permanent, > 0 = temporary (auto-delete after X seconds)
+    };
+}
+
+export interface GameStatsUser {
+    userId: string;
+    username: string;
+    total_games: number;
+    total_triggers: number;
+    time_since_last_trigger: string;
+}
+
+export interface GameStats {
+    users: { [userId: string]: GameStatsUser };
+    leaderboards: {
+        daily: { [userId: string]: GameStatsUser };
+        weekly: { [userId: string]: GameStatsUser };
+        monthly: { [userId: string]: GameStatsUser };
+        all_time: { [userId: string]: GameStatsUser };
     };
 }

@@ -1,31 +1,18 @@
-import { TriviaStatsData } from "./trivia.types";
 import { TriviaData } from "./trivia.types";
-
-export const defaultTriviaStatsData: TriviaStatsData = {
-    users: {},
-    leaderboards: {
-        daily: {},
-        weekly: {},
-        monthly: {},
-        all_time: {}
-    }
-}
+import { generalQuestions } from "./questions/trivia.general";
+import { scienceQuestions } from "./questions/trivia.science";
+import { historyQuestions } from "./questions/trivia.history";
+import { geographyQuestions } from "./questions/trivia.geography";
+import { entertainmentQuestions } from "./questions/trivia.entertainment";
+import { sportsQuestions } from "./questions/trivia.sports";
+import { technologyQuestions } from "./questions/trivia.technology";
 
 export const defaultTriviaData: TriviaData = {
-    general: {
-        name: 'General Knowledge',
-        emoji: '🧠',
-        weight: 1,
-        questions: [
-            {
-                id: 'q001',
-                question: 'What is the capital of France?',
-                options: ['London', 'Paris', 'Berlin', 'Madrid'],
-                correct_answer: 1,
-                category: 'general',
-                difficulty: 'easy',
-                explanation: 'Paris has been the capital of France since the 6th century.'
-            }
-        ]
-    }
+    general: generalQuestions,
+    science: scienceQuestions,
+    history: historyQuestions,
+    geography: geographyQuestions,
+    entertainment: entertainmentQuestions,
+    sports: sportsQuestions,
+    technology: technologyQuestions,
 }

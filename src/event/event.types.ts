@@ -1,4 +1,4 @@
-export interface EventConfig {
+export interface Event {
     enable: boolean;
     name: string;
     channel: string;
@@ -22,5 +22,5 @@ export interface EventConfig {
 }
 
 export interface EventsData {
-    events: EventConfig[];
+    events: Event[];
 }

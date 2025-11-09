@@ -8,7 +8,7 @@ export const defaultTriviaConfig: TriviaConfig = {
         allowed_channels: [],
         ephemeral: false,
         xp_reward: 100,
-        time_limit_seconds: 30,
+        time_limit_seconds: 3600, // 1 hour
         post_time: '12:00',
         timezone: 'Europe/Amsterdam',
         auto_post: true,
@@ -18,10 +18,10 @@ export const defaultTriviaConfig: TriviaConfig = {
         enable: true,
         permissions: ['@everyone'],
         allowed_channels: [],
-        ephemeral: false,
+        ephemeral: true,
         xp_reward: 50,
-        time_limit_seconds: 30,
-        cooldown_seconds: 60
+        time_limit_seconds: 60, // 1 minute
+        cooldown_seconds: 60 // 1 minute
     },
     leaderboard: {
         enable: true,

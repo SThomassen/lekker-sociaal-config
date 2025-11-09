@@ -1,4 +1,4 @@
-export interface LevelConfig {
+export interface LevelingConfig {
     enable: boolean;
     xp_values: {
         message: number;
@@ -46,18 +46,8 @@ export interface LevelConfig {
     };
 }
 
-export interface UserStatsData {
-    users: { [userId: string]: UserLevelData };
-    leaderboards: {
-        daily: { [userId: string]: number };
-        weekly: { [userId: string]: number };
-        monthly: { [userId: string]: number };
-        all_time: { [userId: string]: number };
-    };
-}
-
 // Combined User Data Structure for users.json
-export interface UserLevelData {
+export interface LevelingStatsUser {
     userId: string;
     username: string;
     lastMessageTime: number; // For cooldown tracking
@@ -86,6 +76,12 @@ export interface UserLevelData {
     };
 }
 
-export interface UsersData {
-    users: { [userId: string]: UserLevelData };
+export interface LevelingStats {
+    users: { [userId: string]: LevelingStatsUser };
+    leaderboards: {
+        daily: { [userId: string]: LevelingStatsUser };
+        weekly: { [userId: string]: LevelingStatsUser };
+        monthly: { [userId: string]: LevelingStatsUser };
+        all_time: { [userId: string]: LevelingStatsUser };
+    };
 }

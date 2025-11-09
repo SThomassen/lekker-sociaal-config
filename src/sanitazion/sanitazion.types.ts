@@ -95,8 +95,6 @@ export interface SanitizationConfig {
         count: SanitizationNumericConfig;
     };
     enum_validation: {
-        media_type: SanitizationEnumConfig;
-        category: SanitizationEnumConfig;
         difficulty: SanitizationEnumConfig;
     };
     malicious_content: SanitizationMaliciousContentConfig;

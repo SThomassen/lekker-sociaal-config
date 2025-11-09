@@ -1,4 +1,4 @@
-import { CommandConfig } from "../core/botConfig";
+import { CommandConfig } from "../command/command.types";
 
 export interface GameJamThemePool {
     name: string;
@@ -48,9 +48,42 @@ export interface GameJamConfig {
     status: CommandConfig;
     join: CommandConfig;
     end: CommandConfig & {
-        permissions: string[];
+        announcement_channel: string;
     };
     suggest_theme: CommandConfig & {
         pool: string; // Which pool to add suggestions to
+    };
+}
+
+export interface GameJamStatsUser {
+    userId: string;
+    username: string;
+    total_jams: GameJamCompleted[];
+    completed_jams: GameJamCompleted[];
+    cancelled_jams: GameJamCompleted[];
+    total_time: number;
+    average_time: number;
+    best_time: number;
+    worst_time: number;
+}
+
+export interface GameJamCompleted {
+    jamId: string;
+    userId: string;
+    username: string;
+    timestamp: number;
+    media_id: string;
+    finished_at: number;
+    discord_message_id: string;
+    discord_channel_id: string;
+}
+
+export interface GameJamStats {
+    users: { [userId: string]: GameJamStatsUser };
+    leaderboards: {
+        daily: { [userId: string]: GameJamStatsUser };
+        weekly: { [userId: string]: GameJamStatsUser };
+        monthly: { [userId: string]: GameJamStatsUser };
+        all_time: { [userId: string]: GameJamStatsUser };
     };
 }

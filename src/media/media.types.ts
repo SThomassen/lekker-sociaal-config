@@ -1,6 +1,6 @@
-import { CommandConfig } from "../core/botConfig";
+import { CommandConfig } from "../command/command.types";
 
-export interface MediaStatsConfig extends CommandConfig {
+export interface MediaStatsConfig {
     show_total_items: boolean;
     show_category_breakdown: boolean;
     show_top_contributors: boolean;
@@ -23,13 +23,16 @@ export interface MediaConfig {
     remove_item: CommandConfig;
     update_item: CommandConfig;
     get: CommandConfig;
-    list: CommandConfig;
+    list: CommandConfig & {
+        items_per_page: number;
+        show_filters: boolean;
+    };
     random: CommandConfig;
     id: CommandConfig;
-    stats: CommandConfig;
+    stats: CommandConfig & MediaStatsConfig;
 }
 
-export interface MediaTypeConfig {
+export interface MediaTypeData {
     name: string;
     emoji: string;
     color: number;
@@ -64,5 +67,25 @@ export interface MediaData {
 }
 
 export interface MediaCollection {
-    [mediaType: string]: MediaData[];
+    mediaTypes: MediaTypeData[];
+    media: {
+        [mediaType: string]: MediaData[];
+    }
+}
+
+export interface MediaStatsUser {
+    userId: string;
+    username: string;
+    total_items: number;
+    total_media_shared: number;
+}
+
+export interface MediaStats {
+    users: { [userId: string]: MediaStatsUser };
+    leaderboards: {
+        daily: { [userId: string]: MediaStatsUser };
+        weekly: { [userId: string]: MediaStatsUser };
+        monthly: { [userId: string]: MediaStatsUser };
+        all_time: { [userId: string]: MediaStatsUser };
+    };
 }

@@ -1,0 +1,191 @@
+import { ChallengeCategory } from "../challenge.type";
+
+export const musicChallenges: ChallengeCategory = {
+
+    name: 'Music',
+    emoji: '🎵',
+    weight: 1,
+    description: 'Music challenges',
+    challenges: [
+        {
+            name: 'Clap and record a simple rhythm',
+            description: 'Create and record a simple rhythm using only claps or finger snaps. Try to keep a steady tempo.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Humming melody',
+            description: 'Hum or whistle a short melody (10–15 seconds) and record it.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Make a sound collage',
+            description: 'Record 3–5 household sounds and combine them into a short audio collage.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Drum loop with found objects',
+            description: 'Use cups, pens, or tables as drums to create a simple repeating rhythm loop.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Remix a nursery rhyme',
+            description: 'Take a melody from a simple song like “Twinkle Twinkle” and rearrange or change its rhythm.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Tempo training',
+            description: 'Choose a BPM and try to keep the same tempo by tapping or clapping along for 30 seconds.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'One-note groove',
+            description: 'Make a rhythm-based song using only one note with different durations or volumes.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Mood music',
+            description: 'Compose a 15-second piece that sounds happy or sad using any instrument.',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Nature inspiration',
+            description: 'Create a short melody inspired by a sound from nature (like wind or rain).',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Layered sounds',
+            description: 'Record or arrange three sounds that work well together (e.g., bass, melody, percussion).',
+            difficulty: 'easy',
+            created_by: 'editor',
+        },
+        {
+            name: 'Character theme tune',
+            description: 'Compose a short (15–30 second) theme tune that fits a game character of your choice.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Atmospheric background loop',
+            description: 'Create a looping ambient track that could play in the background of a level or menu.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Chord progression exploration',
+            description: 'Write a short 4-chord progression and use it to build a small tune.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Remake a short melody by ear',
+            description: 'Listen to a short piece of music and try to recreate it by ear.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Build-up and drop',
+            description: 'Compose a 20-second track with a clear build-up and drop, like in electronic music.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Change the genre',
+            description: 'Take a simple song and reimagine it in a different genre (e.g., rock to jazz).',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Dynamic soundtrack cue',
+            description: 'Create a short piece of music that changes intensity halfway through.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Battle loop',
+            description: 'Compose a looping track that could fit a boss fight or action scene.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Soundtrack emotions',
+            description: 'Write two short tracks that convey opposite emotions (e.g., joy vs. fear).',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Instrument focus',
+            description: 'Pick one instrument (real or virtual) and make a short solo piece that shows off its range.',
+            difficulty: 'medium',
+            created_by: 'editor',
+        },
+        {
+            name: 'Full game soundtrack concept',
+            description: 'Design a mini soundtrack (3–4 short loops) that could fit different game levels or moods.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Adaptive music prototype',
+            description: 'Create two connected loops that could dynamically switch based on game intensity.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Live instrument recording',
+            description: 'Record and mix a live performance of at least one instrument layered with virtual instruments.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Genre fusion track',
+            description: 'Compose a track that mixes two very different genres (e.g., orchestral and EDM).',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Full song structure',
+            description: 'Compose a full-length (1–2 minute) track with intro, verse, chorus, and ending.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Custom sound design',
+            description: 'Synthesize or record your own custom sounds for at least 5 unique instruments or effects.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Remix challenge',
+            description: 'Take an existing song (with permission) and create a completely new remix of it.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Interactive music system concept',
+            description: 'Design a concept for an interactive music system that reacts to player behavior.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Cinematic score',
+            description: 'Compose a dramatic soundtrack that fits a short cinematic or trailer (around 1 minute).',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+        {
+            name: 'Recreate a famous soundtrack',
+            description: 'Pick a famous game or movie soundtrack and try to replicate its style and atmosphere without copying melodies.',
+            difficulty: 'hard',
+            created_by: 'editor',
+        },
+    ]
+}

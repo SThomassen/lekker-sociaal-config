@@ -1,17 +1,17 @@
-import { LevelConfig } from "./level.types";
+import { LevelingConfig } from "./leveling.types";
 
-export const defaultLevelConfig: LevelConfig = {
+export const defaultLevelingConfig: LevelingConfig = {
     enable: true,
     xp_values: {
         message: 2,
         reaction_given: 1,
         reaction_received: 2,
         media_shared: 3,
-        media_get: 1,
-        media_list: 1,
-        media_random: 1,
-        social_stats: 1,
-        social_leaderboard: 1
+        media_get: 0,
+        media_list: 0,
+        media_random: 0,
+        social_stats: 0,
+        social_leaderboard: 0
     },
     anti_abuse: {
         message_cooldown_ms: 15000,
@@ -43,6 +43,23 @@ export const defaultLevelConfig: LevelConfig = {
                 10: 'Movie Buff',
                 20: 'Cinema Expert',
                 30: 'Film Critic'
+            },
+            'music': {
+                5: 'Music Fan',
+                10: 'Music Lover',
+                20: 'Music Expert',
+                30: 'Music Connoisseur'
+            },
+            'games': {
+                5: 'Casual Gamer',
+                10: 'Gamer',
+                20: 'Gaming Expert',
+                30: 'Gaming Master'
+            },
+            'general': {
+                10: 'Active Member',
+                25: 'Veteran Member',
+                50: 'Community Legend'
             }
         },
         remove_on_level_down: false,

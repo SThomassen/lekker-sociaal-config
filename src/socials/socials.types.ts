@@ -1,4 +1,4 @@
-import { CommandConfig } from "../core/botConfig";
+import { CommandConfig } from "../command/command.types";
 
 export interface SocialConfig {
     stats: CommandConfig & {

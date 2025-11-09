@@ -1,4 +1,4 @@
-import { CommandConfig } from "../core/botConfig";
+import { CommandConfig } from "../command/command.types";
 
 export interface TriviaConfig {
     enable: boolean;
@@ -54,17 +54,17 @@ export interface TriviaQuestion {
     explanation: string;
 }
 
-export interface TriviaStatsData {
-    users: { [userId: string]: TriviaUserData };
+export interface TriviaStats {
+    users: { [userId: string]: TriviaUserStats };
     leaderboards: {
-        daily: { [userId: string]: TriviaUserData };
-        weekly: { [userId: string]: TriviaUserData };
-        monthly: { [userId: string]: TriviaUserData };
-        all_time: { [userId: string]: TriviaUserData };
+        daily: { [userId: string]: TriviaUserStats };
+        weekly: { [userId: string]: TriviaUserStats };
+        monthly: { [userId: string]: TriviaUserStats };
+        all_time: { [userId: string]: TriviaUserStats };
     };
 }
 
-export interface TriviaUserData {
+export interface TriviaUserStats {
     userId: string;
     username: string;
     total_questions: number;

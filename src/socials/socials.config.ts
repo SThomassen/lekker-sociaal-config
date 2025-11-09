@@ -5,7 +5,7 @@ export const defaultSocialConfig: SocialConfig = {
         enable: true,
         permissions: ['@everyone'],
         allowed_channels: [],
-        ephemeral: false,
+        ephemeral: true,
         show_progress_bar: true,
         show_category_breakdown: true
     },
@@ -13,7 +13,7 @@ export const defaultSocialConfig: SocialConfig = {
         enable: true,
         permissions: ['@everyone'],
         allowed_channels: [],
-        ephemeral: false,
+        ephemeral: true,
         max_entries: 10,
         show_avatars: true
     },
@@ -21,14 +21,14 @@ export const defaultSocialConfig: SocialConfig = {
         enable: true,
         permissions: ['@everyone'],
         allowed_channels: [],
-        ephemeral: false,
+        ephemeral: true,
         show_rank_number: true
     },
     top_media: {
         enable: true,
         permissions: ['@everyone'],
         allowed_channels: [],
-        ephemeral: false,
+        ephemeral: true,
         max_entries: 5
     }
 }
