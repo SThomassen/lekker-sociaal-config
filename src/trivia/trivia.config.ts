@@ -2,10 +2,16 @@ import { TriviaConfig } from "./trivia.types";
 
 export const defaultTriviaConfig: TriviaConfig = {
     enable: true,
+    trivia_api_url: 'https://opentdb.com/api.php',
     daily_question: {
         enable: true,
-        permissions: ['@everyone'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: false,
         xp_reward: 100,
         time_limit_seconds: 3600, // 1 hour
@@ -16,8 +22,13 @@ export const defaultTriviaConfig: TriviaConfig = {
     },
     question: {
         enable: true,
-        permissions: ['@everyone'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true,
         xp_reward: 50,
         time_limit_seconds: 60, // 1 minute
@@ -25,8 +36,13 @@ export const defaultTriviaConfig: TriviaConfig = {
     },
     leaderboard: {
         enable: true,
-        permissions: ['@everyone'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true,
         max_entries: 10,
         show_avatars: true,
@@ -34,8 +50,13 @@ export const defaultTriviaConfig: TriviaConfig = {
     },
     stats: {
         enable: true,
-        permissions: ['@everyone'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true,
         show_streak: true,
         show_accuracy: true,

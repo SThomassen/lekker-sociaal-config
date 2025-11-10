@@ -41,4 +41,7 @@ export interface GameStats {
         monthly: { [userId: string]: GameStatsUser };
         all_time: { [userId: string]: GameStatsUser };
     };
+    total_triggers: number;
+    last_triggered_by: string;
+    time_since_last_trigger: string;
 }

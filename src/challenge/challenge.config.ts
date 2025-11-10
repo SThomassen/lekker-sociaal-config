@@ -1,46 +1,81 @@
-import { ChallengeConfig } from "./challenge.type";
+import { ChallengeConfig } from "./challenge.types";
 
 export const defaultChallengeConfig: ChallengeConfig = {
     add: {
         enable: true,
-        permissions: ['Administrator', 'Moderator'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true
     },
     remove: {
         enable: true,
-        permissions: ['Administrator', 'Moderator'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true
     },
     update: {
         enable: true,
-        permissions: ['Administrator', 'Moderator'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true
     },
     list: {
         enable: true,
-        permissions: ['@everyone'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true
     },
     get: {
         enable: true,
-        permissions: ['@everyone'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true
     },
     random: {
         enable: true,
-        permissions: ['@everyone'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true
     },
     admin: {
         enable: true,
-        permissions: ['Administrator', 'Moderator'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true
     }
 };

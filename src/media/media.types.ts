@@ -32,7 +32,7 @@ export interface MediaConfig {
     stats: CommandConfig & MediaStatsConfig;
 }
 
-export interface MediaTypeData {
+export interface MediaType {
     name: string;
     emoji: string;
     color: number;
@@ -67,7 +67,7 @@ export interface MediaData {
 }
 
 export interface MediaCollection {
-    mediaTypes: MediaTypeData[];
+    mediaTypes: MediaType[];
     media: {
         [mediaType: string]: MediaData[];
     }

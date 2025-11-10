@@ -1,6 +1,6 @@
-import { MediaCollection, MediaTypeData } from "./media.types";
+import { MediaCollection, MediaType } from "./media.types";
 
-export const mediaTypeFilm: MediaTypeData = {
+export const mediaTypeFilm: MediaType = {
     name: 'films',
     emoji: '🎬',
     color: 0x4ECDC4,
@@ -15,7 +15,7 @@ export const mediaTypeFilm: MediaTypeData = {
     }
 }
 
-export const mediaTypeMusic: MediaTypeData = {
+export const mediaTypeMusic: MediaType = {
     name: 'music',
     emoji: '🎵',
     color: 0x4ECDC4,
@@ -30,7 +30,7 @@ export const mediaTypeMusic: MediaTypeData = {
     }
 }
 
-export const mediaTypeGame: MediaTypeData = {
+export const mediaTypeGame: MediaType = {
     name: 'games',
     emoji: '🎮',
     color: 0x4ECDC4,

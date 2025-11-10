@@ -1,4 +1,4 @@
-import { ChallengeCategory } from "../challenge.type";
+import { ChallengeCategory } from "../challenge.types";
 
 export const codeChallenges: ChallengeCategory = {
     name: 'Code',

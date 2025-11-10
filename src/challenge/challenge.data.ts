@@ -1,4 +1,4 @@
-import { ChallengeData } from "./challenge.type";
+import { ChallengeData } from "./challenge.types";
 import { codeChallenges } from "./challenges/challenge.code";
 import { drawChallenges } from "./challenges/challenge.draw";
 import { ModelingChallenges } from "./challenges/challenge.modeling";

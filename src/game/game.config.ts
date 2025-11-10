@@ -3,8 +3,13 @@ import { GameConfig } from "./game.types";
 export const defaultGameConfig: GameConfig = {
     trigger: {
         enable: true,
-        permissions: ['Administrator', 'Moderator'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true,
         cooldown: 300000, // 5 minutes
         custom_message: "You lost the game! 😈",
@@ -13,15 +18,25 @@ export const defaultGameConfig: GameConfig = {
     },
     leaderboard: {
         enable: true,
-        permissions: ['Administrator', 'Moderator'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true,
         max_entries: 10
     },
     stats: {
         enable: true,
-        permissions: ['Administrator', 'Moderator'],
-        allowed_channels: [],
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
         ephemeral: true,
         show_user_triggers: true
     },

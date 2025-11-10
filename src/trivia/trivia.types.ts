@@ -2,6 +2,7 @@ import { CommandConfig } from "../command/command.types";
 
 export interface TriviaConfig {
     enable: boolean;
+    trivia_api_url: string;
     daily_question: CommandConfig & {
         xp_reward: number;
         time_limit_seconds: number;
@@ -54,6 +55,10 @@ export interface TriviaQuestion {
     explanation: string;
 }
 
+export interface TriviaData {
+    [category: string]: TriviaCategory;
+}
+
 export interface TriviaStats {
     users: { [userId: string]: TriviaUserStats };
     leaderboards: {
@@ -71,8 +76,7 @@ export interface TriviaUserStats {
     correct_answers: number;
     current_streak: number;
     best_streak: number;
-}
-
-export interface TriviaData {
-    [category: string]: TriviaCategory;
+    last_answer_time: number;
+    category_stats: { [category: string]: { total: number; correct: number } };
+    difficulty_stats: { [difficulty: string]: { total: number; correct: number } };
 }

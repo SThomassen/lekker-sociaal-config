@@ -1,4 +1,4 @@
-import { ChallengeStats } from "./challenge.type";
+import { ChallengeStats } from "./challenge.types";
 
 export const defaultChallengeStats: ChallengeStats = {
     users: {},

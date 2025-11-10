@@ -1,7 +1,5 @@
-export interface PingConfig {
-    enable: boolean;
-    permissions: string[];
-    allowed_channels: string[];
-    ephemeral: boolean;
+import { CommandConfig } from "../command/command.types";
+
+export interface PingConfig extends CommandConfig {
     message: string;
 }

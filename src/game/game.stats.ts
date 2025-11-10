@@ -7,5 +7,8 @@ export const defaultGameStats: GameStats = {
         weekly: {},
         monthly: {},
         all_time: {}
-    }
+    },
+    total_triggers: 0,
+    last_triggered_by: '',
+    time_since_last_trigger: ''
 };
