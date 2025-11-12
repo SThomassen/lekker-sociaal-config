@@ -60,16 +60,16 @@ export interface TriviaData {
 }
 
 export interface TriviaStats {
-    users: { [userId: string]: TriviaUserStats };
+    users: { [userId: string]: TriviaUser };
     leaderboards: {
-        daily: { [userId: string]: TriviaUserStats };
-        weekly: { [userId: string]: TriviaUserStats };
-        monthly: { [userId: string]: TriviaUserStats };
-        all_time: { [userId: string]: TriviaUserStats };
+        daily: { [userId: string]: TriviaUser };
+        weekly: { [userId: string]: TriviaUser };
+        monthly: { [userId: string]: TriviaUser };
+        all_time: { [userId: string]: TriviaUser };
     };
 }
 
-export interface TriviaUserStats {
+export interface TriviaUser {
     userId: string;
     username: string;
     total_questions: number;
@@ -77,6 +77,7 @@ export interface TriviaUserStats {
     current_streak: number;
     best_streak: number;
     last_answer_time: number;
-    category_stats: { [category: string]: { total: number; correct: number } };
-    difficulty_stats: { [difficulty: string]: { total: number; correct: number } };
+    accuracy: number;
+    category_stats: { [category: string]: { total: number; correct: number, accuracy: number } };
+    difficulty_stats: { [difficulty: string]: { total: number; correct: number, accuracy: number } };
 }
