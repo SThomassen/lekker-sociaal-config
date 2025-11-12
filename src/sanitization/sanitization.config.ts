@@ -1,4 +1,4 @@
-import { SanitizationConfig } from "./sanitazion.types";
+import { SanitizationConfig } from "./sanitization.types";
 
 export const defaultSanitizationConfig: SanitizationConfig = {
     enable: true,
