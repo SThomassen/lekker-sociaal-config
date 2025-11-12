@@ -25,23 +25,23 @@ export interface GameConfig {
     };
 }
 
-export interface GameStatsUser {
+export interface GameUser {
     user_id: string;
     username: string;
     total_games: number;
     total_triggers: number;
-    time_since_last_trigger: string;
+    time_since_last_trigger: number;
 }
 
 export interface GameStats {
-    users: { [user_id: string]: GameStatsUser };
+    users: { [user_id: string]: GameUser };
     leaderboards: {
-        daily: { [user_id: string]: GameStatsUser };
-        weekly: { [user_id: string]: GameStatsUser };
-        monthly: { [user_id: string]: GameStatsUser };
-        all_time: { [user_id: string]: GameStatsUser };
+        daily: { [user_id: string]: GameUser };
+        weekly: { [user_id: string]: GameUser };
+        monthly: { [user_id: string]: GameUser };
+        all_time: { [user_id: string]: GameUser };
     };
     total_triggers: number;
     last_triggered_by: string;
-    time_since_last_trigger: string;
+    time_since_last_trigger: number;
 }
