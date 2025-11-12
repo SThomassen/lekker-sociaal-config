@@ -10,5 +10,5 @@ export const defaultGameStats: GameStats = {
     },
     total_triggers: 0,
     last_triggered_by: '',
-    time_since_last_trigger: ''
+    time_since_last_trigger: 0
 };
