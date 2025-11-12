@@ -37,9 +37,9 @@ export interface MediaType {
     emoji: string;
     color: number;
     thumbnail: string;
-    collectionKey: string;
-    modalId: string;
-    showCreatorInTitle: boolean;
+    collection_key: string;
+    modal_id: string;
+    show_creator_in_title: boolean;
     fields: {
         title: string;
         creator?: string;
@@ -50,42 +50,42 @@ export interface MediaType {
 export interface MediaData {
     id: string;
     name: string;
-    moderatorAddedAt: string;
+    moderator_added_at: string;
     notes?: string;
     url?: string;
     genre?: string;
     creator?: string;
-    mediaType?: string; // Category of the media item
+    media_type?: string; // Category of the media item
     // Discord-specific fields
-    discordMessageId?: string;
-    discordChannelId?: string;
-    discordGuildId?: string;
-    originalMessageAuthor?: string;
-    originalMessageAuthorId?: string;
-    originalMessageTimestamp?: string;
-    moderatorAddedBy?: string;
+    discord_message_id?: string;
+    discord_channel_id?: string;
+    discord_guild_id?: string;
+    original_message_author?: string;
+    original_message_author_id?: string;
+    original_message_timestamp?: string;
+    moderator_added_by?: string;
 }
 
 export interface MediaCollection {
-    mediaTypes: MediaType[];
+    media_types: MediaType[];
     media: {
-        [mediaType: string]: MediaData[];
+        [media_type: string]: MediaData[];
     }
 }
 
 export interface MediaStatsUser {
-    userId: string;
+    user_id: string;
     username: string;
     total_items: number;
     total_media_shared: number;
 }
 
 export interface MediaStats {
-    users: { [userId: string]: MediaStatsUser };
+    users: { [user_id: string]: MediaStatsUser };
     leaderboards: {
-        daily: { [userId: string]: MediaStatsUser };
-        weekly: { [userId: string]: MediaStatsUser };
-        monthly: { [userId: string]: MediaStatsUser };
-        all_time: { [userId: string]: MediaStatsUser };
+        daily: { [user_id: string]: MediaStatsUser };
+        weekly: { [user_id: string]: MediaStatsUser };
+        monthly: { [user_id: string]: MediaStatsUser };
+        all_time: { [user_id: string]: MediaStatsUser };
     };
 }

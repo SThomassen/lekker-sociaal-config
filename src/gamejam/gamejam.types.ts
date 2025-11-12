@@ -20,21 +20,21 @@ export interface GameJam {
     description: string;
     theme: string;
     duration: number; // in days
-    startTime: number; // timestamp
-    endTime: number; // timestamp
-    createdBy: string; // user ID
-    createdByUsername: string;
+    start_time: number; // timestamp
+    end_time: number; // timestamp
+    created_by: string; // user ID
+    created_by_username: string;
     participants: string[]; // user IDs
     status: 'active' | 'completed' | 'cancelled';
-    scheduledEventId?: string; // Discord scheduled event ID
-    announcementMessageId?: string; // Discord message ID
-    announcementChannelId?: string; // Discord channel ID
+    scheduled_event_id?: string; // Discord scheduled event ID
+    announcement_message_id?: string; // Discord message ID
+    announcement_channel_id?: string; // Discord channel ID
 }
 
 export interface GameJamData {
-    active_jams: { [jamId: string]: GameJam };
-    completed_jams: { [jamId: string]: GameJam };
-    suggested_themes: { [poolName: string]: GameJamThemePool }; // Multiple suggestion pools
+    active_jams: { [jam_id: string]: GameJam };
+    completed_jams: { [jam_id: string]: GameJam };
+    suggested_themes: { [pool_name: string]: GameJamThemePool }; // Multiple suggestion pools
 }
 
 export interface GameJamConfig {
@@ -55,8 +55,8 @@ export interface GameJamConfig {
     };
 }
 
-export interface GameJamStatsUser {
-    userId: string;
+export interface GameJamUser {
+    user_id: string;
     username: string;
     total_jams: GameJamCompleted[];
     completed_jams: GameJamCompleted[];
@@ -68,8 +68,8 @@ export interface GameJamStatsUser {
 }
 
 export interface GameJamCompleted {
-    jamId: string;
-    userId: string;
+    jam_id: string;
+    user_id: string;
     username: string;
     timestamp: number;
     media_id: string;
@@ -79,11 +79,11 @@ export interface GameJamCompleted {
 }
 
 export interface GameJamStats {
-    users: { [userId: string]: GameJamStatsUser };
+    users: { [user_id: string]: GameJamUser };
     leaderboards: {
-        daily: { [userId: string]: GameJamStatsUser };
-        weekly: { [userId: string]: GameJamStatsUser };
-        monthly: { [userId: string]: GameJamStatsUser };
-        all_time: { [userId: string]: GameJamStatsUser };
+        daily: { [user_id: string]: GameJamUser };
+        weekly: { [user_id: string]: GameJamUser };
+        monthly: { [user_id: string]: GameJamUser };
+        all_time: { [user_id: string]: GameJamUser };
     };
 }

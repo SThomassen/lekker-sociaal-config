@@ -26,7 +26,7 @@ export interface GameConfig {
 }
 
 export interface GameStatsUser {
-    userId: string;
+    user_id: string;
     username: string;
     total_games: number;
     total_triggers: number;
@@ -34,12 +34,12 @@ export interface GameStatsUser {
 }
 
 export interface GameStats {
-    users: { [userId: string]: GameStatsUser };
+    users: { [user_id: string]: GameStatsUser };
     leaderboards: {
-        daily: { [userId: string]: GameStatsUser };
-        weekly: { [userId: string]: GameStatsUser };
-        monthly: { [userId: string]: GameStatsUser };
-        all_time: { [userId: string]: GameStatsUser };
+        daily: { [user_id: string]: GameStatsUser };
+        weekly: { [user_id: string]: GameStatsUser };
+        monthly: { [user_id: string]: GameStatsUser };
+        all_time: { [user_id: string]: GameStatsUser };
     };
     total_triggers: number;
     last_triggered_by: string;

@@ -48,29 +48,29 @@ export interface LevelingConfig {
 
 // Combined User Data Structure for users.json
 export interface LevelingUser {
-    userId: string;
+    user_id: string;
     username: string;
-    lastMessageTime: number; // For cooldown tracking
-    lastDailyBonus: number; // Timestamp of last daily bonus claim
+    last_message_time: number; // For cooldown tracking
+    last_daily_bonus: number; // Timestamp of last daily bonus claim
     xp: {
         general: number;
         [category: string]: number;
     };
-    totalLevel: number;
-    categoryLevels: {
+    total_level: number;
+    category_levels: {
         [category: string]: number;
     };
-    categoryStats: {
+    category_stats: {
         [category: string]: {
-            mediaShared: number;
-            reactionsReceived: { [emoji: string]: number };
-            reactionsGiven: { [emoji: string]: number };
+            media_shared: number;
+            reactions_received: { [emoji: string]: number };
+            reactions_given: { [emoji: string]: number };
         };
     };
-    reactionTracking: {
+    reaction_tracking: {
         [messageId: string]: {
-            messageId: string;
-            channelId: string;
+            message_id: string;
+            channel_id: string;
             timestamp: number;
         };
     };

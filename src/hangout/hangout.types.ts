@@ -1,33 +1,33 @@
 export interface HangoutConfig {
-    roomURL: string;
+    room_url: string;
     channel: string; // The channel to send the hangout message to
-    roleAssign: string; // The role to assign to the users who are listening to the hangout
-    presenceDynamic: boolean; // If true, the bot will update the presence text based on the hangout activity
-    presenceText: string; // The text to display in the presence when presenceDynamic is false
-    autoUpdate: boolean; // If true, the bot will automatically update the presence text based on the hangout activity
-    autoUpdateInterval: number; // The interval in seconds to update the presence text
-    inactiveMessage: string; // The message to display in the channel when the hangout is inactive
-    joinMessage: string; // The message to display in the channel when a user joins the hangout
-    leaveMessage: string; // The message to display in the channel when a user leaves the hangout
+    role_assign: string; // The role to assign to the users who are listening to the hangout
+    presence_dynamic: boolean; // If true, the bot will update the presence text based on the hangout activity
+    presence_text: string; // The text to display in the presence when presenceDynamic is false
+    auto_update: boolean; // If true, the bot will automatically update the presence text based on the hangout activity
+    auto_update_interval: number; // The interval in seconds to update the presence text
+    inactive_message: string; // The message to display in the channel when the hangout is inactive
+    join_message: string; // The message to display in the channel when a user joins the hangout
+    leave_message: string; // The message to display in the channel when a user leaves the hangout
 }
 
 export interface HangoutActivity {
     room: string;
-    currentSong: string;
-    currentDJ: string;
-    currentListeners: string[];
-    currentPlaylist: string;
-    currentPlaylistDuration: number;
-    currentPlaylistProgress: number;
+    current_song: string;
+    current_dj: string;
+    current_listeners: string[];
+    current_playlist: string;
+    current_playlist_duration: number;
+    current_playlist_progress: number;
 }
 
 export interface HangoutActivityMessage {
     message: string;
-    showJoinLeave: boolean;
-    showCurrentSong: boolean;
-    showCurrentDJ: boolean;
-    showCurrentListeners: boolean;
-    showCurrentPlaylist: boolean;
-    showCurrentPlaylistDuration: boolean;
-    showCurrentPlaylistProgress: boolean;
+    show_join_leave: boolean;
+    show_current_song: boolean;
+    show_current_dj: boolean;
+    show_current_listeners: boolean;
+    show_current_playlist: boolean;
+    show_current_playlist_duration: boolean;
+    show_current_playlist_progress: boolean;
 }

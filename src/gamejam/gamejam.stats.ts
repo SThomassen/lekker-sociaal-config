@@ -1,4 +1,4 @@
-import { GameJamStats, GameJamStatsUser } from "./gamejam.types";
+import { GameJamStats, GameJamUser } from "./gamejam.types";
 
 export const defaultGameJamStats: GameJamStats = {
     users: {},
@@ -10,8 +10,8 @@ export const defaultGameJamStats: GameJamStats = {
     }
 };
 
-export const defaultGameJamStatsUser: GameJamStatsUser = {
-    userId: '',
+export const defaultGameJamUser: GameJamUser = {
+    user_id: '',
     username: '',
     total_jams: [],
     completed_jams: [],

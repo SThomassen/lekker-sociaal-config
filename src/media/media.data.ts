@@ -5,9 +5,9 @@ export const mediaTypeFilm: MediaType = {
     emoji: '🎬',
     color: 0x4ECDC4,
     thumbnail: 'https://example.com/films.png',
-    collectionKey: 'films',
-    modalId: 'films',
-    showCreatorInTitle: false,
+    collection_key: 'films',
+    modal_id: 'films',
+    show_creator_in_title: false,
     fields: {
         title: 'Title',
         creator: 'Director',
@@ -20,9 +20,9 @@ export const mediaTypeMusic: MediaType = {
     emoji: '🎵',
     color: 0x4ECDC4,
     thumbnail: 'https://example.com/music.png',
-    collectionKey: 'music',
-    modalId: 'music',
-    showCreatorInTitle: true,
+    collection_key: 'music',
+    modal_id: 'music',
+    show_creator_in_title: true,
     fields: {
         title: 'Title',
         creator: 'Artist',
@@ -35,9 +35,9 @@ export const mediaTypeGame: MediaType = {
     emoji: '🎮',
     color: 0x4ECDC4,
     thumbnail: 'https://example.com/games.png',
-    collectionKey: 'games',
-    modalId: 'games',
-    showCreatorInTitle: false,
+    collection_key: 'games',
+    modal_id: 'games',
+    show_creator_in_title: false,
     fields: {
         title: 'Title',
         creator: 'Developer',
@@ -46,7 +46,7 @@ export const mediaTypeGame: MediaType = {
 }
 
 export const defaultMediaCollection: MediaCollection = {
-    mediaTypes: [
+    media_types: [
         mediaTypeFilm,
         mediaTypeMusic,
         mediaTypeGame,

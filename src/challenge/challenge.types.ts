@@ -32,7 +32,7 @@ export interface ChallengeData {
 }
 
 export interface ChallengeStatsUser {
-    userId: string;
+    user_id: string;
     username: string;
     total_challenges: number;
     completed_challenges: number;
@@ -45,11 +45,11 @@ export interface ChallengeStatsUser {
 }
 
 export interface ChallengeStats {
-    users: { [userId: string]: ChallengeStatsUser };
+    users: { [user_id: string]: ChallengeStatsUser };
     leaderboards: {
-        daily: { [userId: string]: ChallengeStatsUser };
-        weekly: { [userId: string]: ChallengeStatsUser };
-        monthly: { [userId: string]: ChallengeStatsUser };
-        all_time: { [userId: string]: ChallengeStatsUser };
+        daily: { [user_id: string]: ChallengeStatsUser };
+        weekly: { [user_id: string]: ChallengeStatsUser };
+        monthly: { [user_id: string]: ChallengeStatsUser };
+        all_time: { [user_id: string]: ChallengeStatsUser };
     };
 }

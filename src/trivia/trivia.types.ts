@@ -60,17 +60,17 @@ export interface TriviaData {
 }
 
 export interface TriviaStats {
-    users: { [userId: string]: TriviaUser };
+    users: { [user_id: string]: TriviaUser };
     leaderboards: {
-        daily: { [userId: string]: TriviaUser };
-        weekly: { [userId: string]: TriviaUser };
-        monthly: { [userId: string]: TriviaUser };
-        all_time: { [userId: string]: TriviaUser };
+        daily: { [user_id: string]: TriviaUser };
+        weekly: { [user_id: string]: TriviaUser };
+        monthly: { [user_id: string]: TriviaUser };
+        all_time: { [user_id: string]: TriviaUser };
     };
 }
 
 export interface TriviaUser {
-    userId: string;
+    user_id: string;
     username: string;
     total_questions: number;
     correct_answers: number;
