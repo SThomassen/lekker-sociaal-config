@@ -30,7 +30,7 @@ export interface GameUser {
     username: string;
     total_games: number;
     total_triggers: number;
-    time_since_last_trigger: number;
+    time_since_last_trigger: number; // timestamp in milliseconds
 }
 
 export interface GameStats {
@@ -42,6 +42,6 @@ export interface GameStats {
         all_time: { [user_id: string]: GameUser };
     };
     total_triggers: number;
-    last_triggered_by: string;
-    time_since_last_trigger: number;
+    last_triggered_by: string; // last user who triggered the game
+    time_since_last_trigger: number; // timestamp in milliseconds
 }

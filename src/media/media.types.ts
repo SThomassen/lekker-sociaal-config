@@ -47,7 +47,7 @@ export interface MediaType {
     };
 }
 
-export interface MediaData {
+export interface MediaItem {
     id: string;
     name: string;
     moderator_added_at: string;
@@ -69,7 +69,7 @@ export interface MediaData {
 export interface MediaCollection {
     media_types: MediaType[];
     media: {
-        [media_type: string]: MediaData[];
+        [media_type: string]: MediaItem[];
     }
 }
 
