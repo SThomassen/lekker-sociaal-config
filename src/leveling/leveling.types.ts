@@ -47,7 +47,7 @@ export interface LevelingConfig {
 }
 
 // Combined User Data Structure for users.json
-export interface LevelingStatsUser {
+export interface LevelingUser {
     userId: string;
     username: string;
     lastMessageTime: number; // For cooldown tracking
@@ -77,11 +77,11 @@ export interface LevelingStatsUser {
 }
 
 export interface LevelingStats {
-    users: { [userId: string]: LevelingStatsUser };
+    users: { [userId: string]: LevelingUser };
     leaderboards: {
-        daily: { [userId: string]: LevelingStatsUser };
-        weekly: { [userId: string]: LevelingStatsUser };
-        monthly: { [userId: string]: LevelingStatsUser };
-        all_time: { [userId: string]: LevelingStatsUser };
+        daily: { [userId: string]: LevelingUser };
+        weekly: { [userId: string]: LevelingUser };
+        monthly: { [userId: string]: LevelingUser };
+        all_time: { [userId: string]: LevelingUser };
     };
 }
