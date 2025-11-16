@@ -4,6 +4,7 @@ export const defaultGameJamConfig: GameJamConfig = {
     enable: true,
     start: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -19,6 +20,7 @@ export const defaultGameJamConfig: GameJamConfig = {
     },
     status: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -30,6 +32,7 @@ export const defaultGameJamConfig: GameJamConfig = {
     },
     join: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -41,6 +44,7 @@ export const defaultGameJamConfig: GameJamConfig = {
     },
     end: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -53,6 +57,7 @@ export const defaultGameJamConfig: GameJamConfig = {
     },
     suggest_theme: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],

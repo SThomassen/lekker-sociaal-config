@@ -3,6 +3,7 @@ import { SocialConfig } from "./socials.types";
 export const defaultSocialConfig: SocialConfig = {
     stats: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -16,6 +17,7 @@ export const defaultSocialConfig: SocialConfig = {
     },
     leaderboard: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -29,6 +31,7 @@ export const defaultSocialConfig: SocialConfig = {
     },
     rank: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -41,6 +44,7 @@ export const defaultSocialConfig: SocialConfig = {
     },
     top_media: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],

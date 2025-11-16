@@ -1,12 +1,7 @@
 import { CommandConfig } from "../command/command.types";
 
 export interface GameConfig {
-    trigger: CommandConfig & {
-        cooldown: number; // in milliseconds
-        custom_message: string;
-        reaction_emoji: string;
-        timeout_seconds?: number; // 0 = permanent, > 0 = temporary (auto-delete after X seconds)
-    };
+    trigger: CommandConfig;
     leaderboard: CommandConfig & {
         max_entries: number;
     };
@@ -16,13 +11,15 @@ export interface GameConfig {
     message_detection: {
         enable: boolean;
         trigger_keywords: string[];
+    };
+    message: {
         channel: string;
         mention_user: boolean;
         custom_message: string;
         cooldown: number; // in milliseconds
         reaction_emoji: string;
         timeout_seconds?: number; // 0 = permanent, > 0 = temporary (auto-delete after X seconds)
-    };
+    }
 }
 
 export interface GameUser {

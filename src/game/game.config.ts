@@ -3,6 +3,7 @@ import { GameConfig } from "./game.types";
 export const defaultGameConfig: GameConfig = {
     trigger: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -11,13 +12,10 @@ export const defaultGameConfig: GameConfig = {
             response_channel: '',
         },
         ephemeral: true,
-        cooldown: 300000, // 5 minutes
-        custom_message: "You lost the game! 😈",
-        reaction_emoji: "😈",
-        timeout_seconds: 0 // Default to permanent messages
     },
     leaderboard: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -30,6 +28,7 @@ export const defaultGameConfig: GameConfig = {
     },
     stats: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -43,6 +42,8 @@ export const defaultGameConfig: GameConfig = {
     message_detection: {
         enable: true,
         trigger_keywords: ['game'],
+    },
+    message: {
         channel: '',
         mention_user: true,
         custom_message: "I LOST THE GAME!",

@@ -1,7 +1,8 @@
 export interface CommandConfig {
     enable: boolean;
+    cooldown: number;
     permissions: PermissionConfig;
-    ephemeral: boolean;
+    ephemeral?: boolean;
 }
 
 export interface PermissionConfig {

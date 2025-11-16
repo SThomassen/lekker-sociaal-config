@@ -3,6 +3,7 @@ import { ChallengeConfig } from "./challenge.types";
 export const defaultChallengeConfig: ChallengeConfig = {
     add: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -14,6 +15,7 @@ export const defaultChallengeConfig: ChallengeConfig = {
     },
     remove: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -25,6 +27,7 @@ export const defaultChallengeConfig: ChallengeConfig = {
     },
     update: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -36,6 +39,7 @@ export const defaultChallengeConfig: ChallengeConfig = {
     },
     list: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -47,6 +51,7 @@ export const defaultChallengeConfig: ChallengeConfig = {
     },
     get: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -58,6 +63,7 @@ export const defaultChallengeConfig: ChallengeConfig = {
     },
     random: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -69,6 +75,7 @@ export const defaultChallengeConfig: ChallengeConfig = {
     },
     admin: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],

@@ -8,18 +8,17 @@ export interface MediaStatsConfig {
 }
 
 export interface MediaConfig {
-    add_item: CommandConfig & {
-        auto_detection?: {
-            enable: boolean;
-            min_confidence: number;
-            platforms: {
-                youtube: boolean;
-                spotify: boolean;
-                imdb: boolean;
-                steam: boolean;
-            };
+    auto_detection?: {
+        enable: boolean;
+        min_confidence: number;
+        platforms: {
+            youtube: boolean;
+            spotify: boolean;
+            imdb: boolean;
+            steam: boolean;
         };
     };
+    add_item: CommandConfig;
     remove_item: CommandConfig;
     update_item: CommandConfig;
     get: CommandConfig;

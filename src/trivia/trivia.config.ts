@@ -5,6 +5,7 @@ export const defaultTriviaConfig: TriviaConfig = {
     trivia_api_url: 'https://opentdb.com/api.php',
     daily_question: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -22,6 +23,7 @@ export const defaultTriviaConfig: TriviaConfig = {
     },
     question: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -36,6 +38,7 @@ export const defaultTriviaConfig: TriviaConfig = {
     },
     leaderboard: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -50,6 +53,7 @@ export const defaultTriviaConfig: TriviaConfig = {
     },
     stats: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],

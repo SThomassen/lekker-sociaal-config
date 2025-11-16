@@ -1,8 +1,19 @@
 import { MediaConfig } from "./media.types";
 
 export const defaultMediaConfig: MediaConfig = {
+    auto_detection: {
+        enable: true,
+        min_confidence: 0.6,
+        platforms: {
+            youtube: true,
+            spotify: true,
+            imdb: true,
+            steam: true,
+        },
+    },
     add_item: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -11,19 +22,10 @@ export const defaultMediaConfig: MediaConfig = {
             response_channel: '',
         },
         ephemeral: true,
-        auto_detection: {
-            enable: true,
-            min_confidence: 0.6,
-            platforms: {
-                youtube: true,
-                spotify: true,
-                imdb: true,
-                steam: true,
-            },
-        },
     },
     remove_item: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -35,6 +37,7 @@ export const defaultMediaConfig: MediaConfig = {
     },
     update_item: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -46,6 +49,7 @@ export const defaultMediaConfig: MediaConfig = {
     },
     get: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -57,6 +61,7 @@ export const defaultMediaConfig: MediaConfig = {
     },
     list: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -70,6 +75,7 @@ export const defaultMediaConfig: MediaConfig = {
     },
     random: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],
@@ -81,6 +87,7 @@ export const defaultMediaConfig: MediaConfig = {
     },
     id: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['Administrator', 'Moderator'],
             ignored_roles: [],
@@ -92,6 +99,7 @@ export const defaultMediaConfig: MediaConfig = {
     },
     stats: {
         enable: true,
+        cooldown: 0,
         permissions: {
             allowed_roles: ['@everyone'],
             ignored_roles: [],

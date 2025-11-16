@@ -2,6 +2,7 @@ import { PingConfig } from "./ping.types";
 
 export const defaultPingConfig: PingConfig = {
     enable: true,
+    cooldown: 0,
     permissions: {
         allowed_roles: ['@everyone'],
         ignored_roles: [],
