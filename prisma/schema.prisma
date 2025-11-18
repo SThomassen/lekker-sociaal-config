@@ -1,0 +1,270 @@
+// Prisma schema for shared data models across projects
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Leveling System Models
+model LevelingUser {
+  user_id            String   @db.VarChar(255)
+  guild_id           String   @db.VarChar(255)
+  username           String   @db.VarChar(255)
+  last_message_time  BigInt   @default(0)
+  last_daily_bonus   BigInt   @default(0)
+  xp                 Json
+  total_level        Int      @default(1)
+  category_levels    Json
+  category_stats     Json
+  reaction_tracking  Json?
+  updatedAt          DateTime @updatedAt
+  createdAt          DateTime @default(now())
+
+  @@id([guild_id, user_id])
+  @@index([guild_id])
+  @@map("leveling_users")
+}
+
+model LevelingLeaderboard {
+  guild_id  String   @db.VarChar(255)
+  user_id   String   @db.VarChar(255)
+  period    String   @db.VarChar(50) // daily, weekly, monthly, all_time
+  user_data Json
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@id([guild_id, user_id, period])
+  @@index([guild_id, period])
+  @@map("leveling_leaderboards")
+}
+
+// Trivia System Models
+model TriviaUser {
+  user_id          String   @db.VarChar(255)
+  guild_id         String   @db.VarChar(255)
+  username         String   @db.VarChar(255)
+  total_questions  Int      @default(0)
+  correct_answers  Int      @default(0)
+  current_streak   Int      @default(0)
+  best_streak      Int      @default(0)
+  last_answer_time BigInt   @default(0)
+  accuracy         Float    @default(0)
+  category_stats   Json
+  difficulty_stats Json
+  updatedAt        DateTime @updatedAt
+  createdAt        DateTime @default(now())
+
+  @@id([guild_id, user_id])
+  @@index([guild_id])
+  @@map("trivia_users")
+}
+
+model TriviaLeaderboard {
+  guild_id  String   @db.VarChar(255)
+  user_id   String   @db.VarChar(255)
+  period    String   @db.VarChar(50) // daily, weekly, monthly, all_time
+  user_data Json
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@id([guild_id, user_id, period])
+  @@index([guild_id, period])
+  @@map("trivia_leaderboards")
+}
+
+// Media System Models
+model MediaItem {
+  id                        String    @id @db.VarChar(255)
+  guild_id                  String    @db.VarChar(255)
+  media_type                String    @db.VarChar(100)
+  name                      String    @db.VarChar(500)
+  moderator_added_at        String    @db.VarChar(100)
+  notes                     String?   @db.Text
+  url                       String?   @db.VarChar(1000)
+  genre                     String?   @db.VarChar(255)
+  creator                   String?   @db.VarChar(255)
+  discord_message_id        String?   @db.VarChar(255)
+  discord_channel_id        String?   @db.VarChar(255)
+  discord_guild_id          String?   @db.VarChar(255)
+  original_message_author   String?   @db.VarChar(255)
+  original_message_author_id String?  @db.VarChar(255)
+  original_message_timestamp String?  @db.VarChar(100)
+  moderator_added_by        String?   @db.VarChar(255)
+  reaction_count            Int?      @default(0)
+  updatedAt                 DateTime  @updatedAt
+  createdAt                 DateTime  @default(now())
+
+  @@index([guild_id, media_type])
+  @@index([guild_id])
+  @@map("media_items")
+}
+
+// Game (Lost Game) System Models
+model GameUser {
+  user_id                String   @db.VarChar(255)
+  guild_id               String   @db.VarChar(255)
+  username               String   @db.VarChar(255)
+  total_games            Int      @default(0)
+  total_triggers         Int      @default(0)
+  time_since_last_trigger BigInt  @default(0)
+  updatedAt              DateTime @updatedAt
+  createdAt              DateTime @default(now())
+
+  @@id([guild_id, user_id])
+  @@index([guild_id])
+  @@map("game_users")
+}
+
+model GameLeaderboard {
+  guild_id  String   @db.VarChar(255)
+  user_id   String   @db.VarChar(255)
+  period    String   @db.VarChar(50) // daily, weekly, monthly, all_time
+  user_data Json
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@id([guild_id, user_id, period])
+  @@index([guild_id, period])
+  @@map("game_leaderboards")
+}
+
+model GameStats {
+  guild_id               String   @id @db.VarChar(255)
+  total_triggers         Int      @default(0)
+  last_triggered_by      String?  @db.VarChar(255)
+  time_since_last_trigger BigInt  @default(0)
+  updatedAt              DateTime @updatedAt
+  createdAt              DateTime @default(now())
+
+  @@map("game_stats")
+}
+
+// Game Jam System Models
+model GameJamThemePool {
+  id        Int      @id @default(autoincrement())
+  guild_id  String   @db.VarChar(255)
+  pool_name String   @db.VarChar(255)
+  themes    Json
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@unique([guild_id, pool_name])
+  @@index([guild_id])
+  @@map("game_jam_theme_pools")
+}
+
+model GameJamEntry {
+  id                      Int      @id @default(autoincrement())
+  guild_id                String   @db.VarChar(255)
+  jam_id                  String   @db.VarChar(255)
+  name                    String   @db.VarChar(500)
+  description             String?  @db.Text
+  theme                   String   @db.VarChar(255)
+  duration                Int      // in days
+  start_time              BigInt
+  end_time                BigInt
+  created_by              String   @db.VarChar(255)
+  created_by_username     String   @db.VarChar(255)
+  participants            Json
+  status                  String   @db.VarChar(50) // active, completed, cancelled
+  scheduled_event_id      String?  @db.VarChar(255)
+  announcement_message_id String?  @db.VarChar(255)
+  announcement_channel_id String?  @db.VarChar(255)
+  updatedAt               DateTime @updatedAt
+  createdAt               DateTime @default(now())
+
+  @@unique([guild_id, jam_id])
+  @@index([guild_id, status])
+  @@index([guild_id])
+  @@index([jam_id])
+  @@map("game_jam_entries")
+}
+
+model GameJamUser {
+  user_id        String   @db.VarChar(255)
+  guild_id       String   @db.VarChar(255)
+  username       String   @db.VarChar(255)
+  total_jams     Json
+  completed_jams Json
+  cancelled_jams Json
+  total_time     BigInt   @default(0)
+  average_time   BigInt   @default(0)
+  best_time      BigInt   @default(0)
+  worst_time     BigInt   @default(0)
+  updatedAt      DateTime @updatedAt
+  createdAt      DateTime @default(now())
+
+  @@id([guild_id, user_id])
+  @@index([guild_id])
+  @@map("game_jam_users")
+}
+
+model GameJamLeaderboard {
+  guild_id  String   @db.VarChar(255)
+  user_id   String   @db.VarChar(255)
+  period    String   @db.VarChar(50) // daily, weekly, monthly, all_time
+  user_data Json
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@id([guild_id, user_id, period])
+  @@index([guild_id, period])
+  @@map("game_jam_leaderboards")
+}
+
+// Challenge System Models
+model ChallengeUser {
+  user_id            String   @db.VarChar(255)
+  guild_id           String   @db.VarChar(255)
+  username           String   @db.VarChar(255)
+  total_challenges   Int      @default(0)
+  completed_challenges Int    @default(0)
+  failed_challenges  Int      @default(0)
+  total_time         BigInt   @default(0)
+  average_time       BigInt   @default(0)
+  best_time          BigInt   @default(0)
+  worst_time         BigInt   @default(0)
+  average_difficulty Float    @default(0)
+  updatedAt          DateTime @updatedAt
+  createdAt          DateTime @default(now())
+
+  @@id([guild_id, user_id])
+  @@index([guild_id])
+  @@map("challenge_users")
+}
+
+model ChallengeLeaderboard {
+  guild_id  String   @db.VarChar(255)
+  user_id   String   @db.VarChar(255)
+  period    String   @db.VarChar(50) // daily, weekly, monthly, all_time
+  user_data Json
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@id([guild_id, user_id, period])
+  @@index([guild_id, period])
+  @@map("challenge_leaderboards")
+}
+
+// Event System Models
+model Event {
+  id          Int      @id @default(autoincrement())
+  guild_id    String   @db.VarChar(255)
+  enable      Boolean  @default(true)
+  name        String   @db.VarChar(255)
+  channel     String   @db.VarChar(255)
+  post_time   String   @db.VarChar(50)
+  timezone    String   @db.VarChar(100)
+  search_terms Json
+  filters     Json
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+
+  @@index([guild_id])
+  @@map("events")
+}
+
