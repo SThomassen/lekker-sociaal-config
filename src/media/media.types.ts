@@ -63,6 +63,7 @@ export interface MediaItem {
     original_message_author_id?: string;
     original_message_timestamp?: string;
     moderator_added_by?: string;
+    reaction_count?: number;
 }
 
 export interface MediaCollection {
