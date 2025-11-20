@@ -1,0 +1,1 @@
+{"version":3,"file":"ping.config.js","sourceRoot":"","sources":["../../../src/ping/ping.config.ts"],"names":[],"mappings":";;;AAEa,QAAA,iBAAiB,GAAe;IACzC,MAAM,EAAE,IAAI;IACZ,QAAQ,EAAE,CAAC;IACX,WAAW,EAAE;QACT,aAAa,EAAE,CAAC,WAAW,CAAC;QAC5B,aAAa,EAAE,EAAE;QACjB,gBAAgB,EAAE,EAAE;QACpB,gBAAgB,EAAE,EAAE;QACpB,gBAAgB,EAAE,EAAE;KACvB;IACD,SAAS,EAAE,IAAI;IACf,OAAO,EAAE,OAAO;CACnB,CAAA"}

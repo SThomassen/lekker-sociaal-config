@@ -1,0 +1,1 @@
+{"version":3,"file":"styling.types.d.ts","sourceRoot":"","sources":["../../../src/styling/styling.types.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,aAAa;IAC1B,aAAa,EAAE,MAAM,CAAC;IACtB,eAAe,EAAE,MAAM,CAAC;IACxB,YAAY,EAAE,MAAM,CAAC;IACrB,gBAAgB,EAAE,MAAM,CAAC;IACzB,UAAU,EAAE,MAAM,CAAC;IACnB,IAAI,EAAE,MAAM,CAAC;CAChB"}
