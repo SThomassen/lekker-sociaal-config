@@ -6,6 +6,7 @@ export interface MediaStatsConfig {
     max_contributors: number;
 }
 export interface MediaConfig {
+    enable: boolean;
     auto_detection?: {
         enable: boolean;
         min_confidence: number;

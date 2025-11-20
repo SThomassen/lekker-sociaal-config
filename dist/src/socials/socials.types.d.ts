@@ -1,5 +1,6 @@
 import { CommandConfig } from "../command/command.types";
 export interface SocialConfig {
+    enable: boolean;
     stats: CommandConfig & {
         show_progress_bar: boolean;
         show_category_breakdown: boolean;

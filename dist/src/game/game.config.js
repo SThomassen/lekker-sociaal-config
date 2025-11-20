@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultGameConfig = void 0;
 exports.defaultGameConfig = {
+    enable: true,
     trigger: {
         enable: true,
         cooldown: 0,

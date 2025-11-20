@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultMediaConfig = void 0;
 exports.defaultMediaConfig = {
+    enable: true,
     auto_detection: {
         enable: true,
         min_confidence: 0.6,
