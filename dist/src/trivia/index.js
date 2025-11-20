@@ -17,4 +17,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./trivia.config"), exports);
 __exportStar(require("./trivia.types"), exports);
 __exportStar(require("./trivia.data"), exports);
+__exportStar(require("./trivia.stats"), exports);
 //# sourceMappingURL=index.js.map
