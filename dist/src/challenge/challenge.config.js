@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultChallengeConfig = void 0;
 exports.defaultChallengeConfig = {
+    enable: true,
     add: {
         enable: true,
         cooldown: 0,

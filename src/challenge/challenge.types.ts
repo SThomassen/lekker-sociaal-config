@@ -1,6 +1,7 @@
 import { CommandConfig } from "../command/command.types";
 
 export interface ChallengeConfig {
+    enable: boolean;
     add: CommandConfig;
     remove: CommandConfig;
     update: CommandConfig;
