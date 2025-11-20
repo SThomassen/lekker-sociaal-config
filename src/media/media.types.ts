@@ -8,6 +8,7 @@ export interface MediaStatsConfig {
 }
 
 export interface MediaConfig {
+    enable: boolean;
     auto_detection?: {
         enable: boolean;
         min_confidence: number;

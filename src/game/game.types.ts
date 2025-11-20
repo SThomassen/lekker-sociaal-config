@@ -1,6 +1,7 @@
 import { CommandConfig } from "../command/command.types";
 
 export interface GameConfig {
+    enable: boolean;
     trigger: CommandConfig;
     leaderboard: CommandConfig & {
         max_entries: number;

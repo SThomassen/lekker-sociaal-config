@@ -1,6 +1,7 @@
 import { MediaConfig } from "./media.types";
 
 export const defaultMediaConfig: MediaConfig = {
+    enable: true,
     auto_detection: {
         enable: true,
         min_confidence: 0.6,

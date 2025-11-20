@@ -1,6 +1,7 @@
 import { GameConfig } from "./game.types";
 
 export const defaultGameConfig: GameConfig = {
+    enable: true,
     trigger: {
         enable: true,
         cooldown: 0,
