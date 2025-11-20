@@ -5,14 +5,8 @@
     "types": "dist/index.d.ts",
     "private": true,
     "scripts": {
-        "build": "tsc",
+        "build": "tsc && node scripts/generate-exports.cjs",
         "prepublishOnly": "npm run build"
-    },
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        }
     },
     "devDependencies": {
         "prisma": "^6.19.0",
@@ -20,5 +14,283 @@
     },
     "dependencies": {
         "@prisma/client": "^6.19.0"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./src/ping/ping.config": {
+            "types": "./dist/src/ping/ping.config.d.ts",
+            "default": "./dist/src/ping/ping.config.js"
+        },
+        "./src/ping/index": {
+            "types": "./dist/src/ping/index.d.ts",
+            "default": "./dist/src/ping/index.js"
+        },
+        "./src/ping/ping.types": {
+            "types": "./dist/src/ping/ping.types.d.ts",
+            "default": "./dist/src/ping/ping.types.js"
+        },
+        "./src/general/general.config": {
+            "types": "./dist/src/general/general.config.d.ts",
+            "default": "./dist/src/general/general.config.js"
+        },
+        "./src/general/index": {
+            "types": "./dist/src/general/index.d.ts",
+            "default": "./dist/src/general/index.js"
+        },
+        "./src/general/general.types": {
+            "types": "./dist/src/general/general.types.d.ts",
+            "default": "./dist/src/general/general.types.js"
+        },
+        "./src/notification/index": {
+            "types": "./dist/src/notification/index.d.ts",
+            "default": "./dist/src/notification/index.js"
+        },
+        "./src/notification/notification.types": {
+            "types": "./dist/src/notification/notification.types.d.ts",
+            "default": "./dist/src/notification/notification.types.js"
+        },
+        "./src/notification/notification.config": {
+            "types": "./dist/src/notification/notification.config.d.ts",
+            "default": "./dist/src/notification/notification.config.js"
+        },
+        "./src/leveling/leveling.stats": {
+            "types": "./dist/src/leveling/leveling.stats.d.ts",
+            "default": "./dist/src/leveling/leveling.stats.js"
+        },
+        "./src/leveling/index": {
+            "types": "./dist/src/leveling/index.d.ts",
+            "default": "./dist/src/leveling/index.js"
+        },
+        "./src/leveling/leveling.config": {
+            "types": "./dist/src/leveling/leveling.config.d.ts",
+            "default": "./dist/src/leveling/leveling.config.js"
+        },
+        "./src/leveling/leveling.types": {
+            "types": "./dist/src/leveling/leveling.types.d.ts",
+            "default": "./dist/src/leveling/leveling.types.js"
+        },
+        "./src/hangout/hangout.config": {
+            "types": "./dist/src/hangout/hangout.config.d.ts",
+            "default": "./dist/src/hangout/hangout.config.js"
+        },
+        "./src/hangout/hangout.types": {
+            "types": "./dist/src/hangout/hangout.types.d.ts",
+            "default": "./dist/src/hangout/hangout.types.js"
+        },
+        "./src/hangout/index": {
+            "types": "./dist/src/hangout/index.d.ts",
+            "default": "./dist/src/hangout/index.js"
+        },
+        "./src/trivia/trivia.stats": {
+            "types": "./dist/src/trivia/trivia.stats.d.ts",
+            "default": "./dist/src/trivia/trivia.stats.js"
+        },
+        "./src/trivia/trivia.config": {
+            "types": "./dist/src/trivia/trivia.config.d.ts",
+            "default": "./dist/src/trivia/trivia.config.js"
+        },
+        "./src/trivia/index": {
+            "types": "./dist/src/trivia/index.d.ts",
+            "default": "./dist/src/trivia/index.js"
+        },
+        "./src/trivia/trivia.data": {
+            "types": "./dist/src/trivia/trivia.data.d.ts",
+            "default": "./dist/src/trivia/trivia.data.js"
+        },
+        "./src/trivia/trivia.types": {
+            "types": "./dist/src/trivia/trivia.types.d.ts",
+            "default": "./dist/src/trivia/trivia.types.js"
+        },
+        "./src/trivia/questions/trivia.technology": {
+            "types": "./dist/src/trivia/questions/trivia.technology.d.ts",
+            "default": "./dist/src/trivia/questions/trivia.technology.js"
+        },
+        "./src/trivia/questions/trivia.sports": {
+            "types": "./dist/src/trivia/questions/trivia.sports.d.ts",
+            "default": "./dist/src/trivia/questions/trivia.sports.js"
+        },
+        "./src/trivia/questions/trivia.geography": {
+            "types": "./dist/src/trivia/questions/trivia.geography.d.ts",
+            "default": "./dist/src/trivia/questions/trivia.geography.js"
+        },
+        "./src/trivia/questions/trivia.science": {
+            "types": "./dist/src/trivia/questions/trivia.science.d.ts",
+            "default": "./dist/src/trivia/questions/trivia.science.js"
+        },
+        "./src/trivia/questions/trivia.entertainment": {
+            "types": "./dist/src/trivia/questions/trivia.entertainment.d.ts",
+            "default": "./dist/src/trivia/questions/trivia.entertainment.js"
+        },
+        "./src/trivia/questions/trivia.general": {
+            "types": "./dist/src/trivia/questions/trivia.general.d.ts",
+            "default": "./dist/src/trivia/questions/trivia.general.js"
+        },
+        "./src/trivia/questions/trivia.history": {
+            "types": "./dist/src/trivia/questions/trivia.history.d.ts",
+            "default": "./dist/src/trivia/questions/trivia.history.js"
+        },
+        "./src/game/game.config": {
+            "types": "./dist/src/game/game.config.d.ts",
+            "default": "./dist/src/game/game.config.js"
+        },
+        "./src/game/game.types": {
+            "types": "./dist/src/game/game.types.d.ts",
+            "default": "./dist/src/game/game.types.js"
+        },
+        "./src/game/index": {
+            "types": "./dist/src/game/index.d.ts",
+            "default": "./dist/src/game/index.js"
+        },
+        "./src/game/game.stats": {
+            "types": "./dist/src/game/game.stats.d.ts",
+            "default": "./dist/src/game/game.stats.js"
+        },
+        "./src/styling/styling.config": {
+            "types": "./dist/src/styling/styling.config.d.ts",
+            "default": "./dist/src/styling/styling.config.js"
+        },
+        "./src/styling/index": {
+            "types": "./dist/src/styling/index.d.ts",
+            "default": "./dist/src/styling/index.js"
+        },
+        "./src/styling/styling.types": {
+            "types": "./dist/src/styling/styling.types.d.ts",
+            "default": "./dist/src/styling/styling.types.js"
+        },
+        "./src/socials/socials.config": {
+            "types": "./dist/src/socials/socials.config.d.ts",
+            "default": "./dist/src/socials/socials.config.js"
+        },
+        "./src/socials/index": {
+            "types": "./dist/src/socials/index.d.ts",
+            "default": "./dist/src/socials/index.js"
+        },
+        "./src/socials/socials.types": {
+            "types": "./dist/src/socials/socials.types.d.ts",
+            "default": "./dist/src/socials/socials.types.js"
+        },
+        "./src/command/command.types": {
+            "types": "./dist/src/command/command.types.d.ts",
+            "default": "./dist/src/command/command.types.js"
+        },
+        "./src/command/index": {
+            "types": "./dist/src/command/index.d.ts",
+            "default": "./dist/src/command/index.js"
+        },
+        "./src/challenge/challenge.types": {
+            "types": "./dist/src/challenge/challenge.types.d.ts",
+            "default": "./dist/src/challenge/challenge.types.js"
+        },
+        "./src/challenge/challenges/challenge.modeling": {
+            "types": "./dist/src/challenge/challenges/challenge.modeling.d.ts",
+            "default": "./dist/src/challenge/challenges/challenge.modeling.js"
+        },
+        "./src/challenge/challenges/challenge.draw": {
+            "types": "./dist/src/challenge/challenges/challenge.draw.d.ts",
+            "default": "./dist/src/challenge/challenges/challenge.draw.js"
+        },
+        "./src/challenge/challenges/challenge.music": {
+            "types": "./dist/src/challenge/challenges/challenge.music.d.ts",
+            "default": "./dist/src/challenge/challenges/challenge.music.js"
+        },
+        "./src/challenge/challenges/challenge.game": {
+            "types": "./dist/src/challenge/challenges/challenge.game.d.ts",
+            "default": "./dist/src/challenge/challenges/challenge.game.js"
+        },
+        "./src/challenge/challenges/challenge.code": {
+            "types": "./dist/src/challenge/challenges/challenge.code.d.ts",
+            "default": "./dist/src/challenge/challenges/challenge.code.js"
+        },
+        "./src/challenge/index": {
+            "types": "./dist/src/challenge/index.d.ts",
+            "default": "./dist/src/challenge/index.js"
+        },
+        "./src/challenge/challenge.config": {
+            "types": "./dist/src/challenge/challenge.config.d.ts",
+            "default": "./dist/src/challenge/challenge.config.js"
+        },
+        "./src/challenge/challenge.data": {
+            "types": "./dist/src/challenge/challenge.data.d.ts",
+            "default": "./dist/src/challenge/challenge.data.js"
+        },
+        "./src/challenge/challenge.stats": {
+            "types": "./dist/src/challenge/challenge.stats.d.ts",
+            "default": "./dist/src/challenge/challenge.stats.js"
+        },
+        "./src/sanitization/sanitization.config": {
+            "types": "./dist/src/sanitization/sanitization.config.d.ts",
+            "default": "./dist/src/sanitization/sanitization.config.js"
+        },
+        "./src/sanitization/index": {
+            "types": "./dist/src/sanitization/index.d.ts",
+            "default": "./dist/src/sanitization/index.js"
+        },
+        "./src/sanitization/sanitization.types": {
+            "types": "./dist/src/sanitization/sanitization.types.d.ts",
+            "default": "./dist/src/sanitization/sanitization.types.js"
+        },
+        "./src/event/event.data": {
+            "types": "./dist/src/event/event.data.d.ts",
+            "default": "./dist/src/event/event.data.js"
+        },
+        "./src/event/index": {
+            "types": "./dist/src/event/index.d.ts",
+            "default": "./dist/src/event/index.js"
+        },
+        "./src/event/event.types": {
+            "types": "./dist/src/event/event.types.d.ts",
+            "default": "./dist/src/event/event.types.js"
+        },
+        "./src/helpers/index": {
+            "types": "./dist/src/helpers/index.d.ts",
+            "default": "./dist/src/helpers/index.js"
+        },
+        "./src/helpers/utils": {
+            "types": "./dist/src/helpers/utils.d.ts",
+            "default": "./dist/src/helpers/utils.js"
+        },
+        "./src/gamejam/gamejam.data": {
+            "types": "./dist/src/gamejam/gamejam.data.d.ts",
+            "default": "./dist/src/gamejam/gamejam.data.js"
+        },
+        "./src/gamejam/index": {
+            "types": "./dist/src/gamejam/index.d.ts",
+            "default": "./dist/src/gamejam/index.js"
+        },
+        "./src/gamejam/gamejam.types": {
+            "types": "./dist/src/gamejam/gamejam.types.d.ts",
+            "default": "./dist/src/gamejam/gamejam.types.js"
+        },
+        "./src/gamejam/gamejam.config": {
+            "types": "./dist/src/gamejam/gamejam.config.d.ts",
+            "default": "./dist/src/gamejam/gamejam.config.js"
+        },
+        "./src/gamejam/gamejam.stats": {
+            "types": "./dist/src/gamejam/gamejam.stats.d.ts",
+            "default": "./dist/src/gamejam/gamejam.stats.js"
+        },
+        "./src/media/media.config": {
+            "types": "./dist/src/media/media.config.d.ts",
+            "default": "./dist/src/media/media.config.js"
+        },
+        "./src/media/media.types": {
+            "types": "./dist/src/media/media.types.d.ts",
+            "default": "./dist/src/media/media.types.js"
+        },
+        "./src/media/index": {
+            "types": "./dist/src/media/index.d.ts",
+            "default": "./dist/src/media/index.js"
+        },
+        "./src/media/media.data": {
+            "types": "./dist/src/media/media.data.d.ts",
+            "default": "./dist/src/media/media.data.js"
+        },
+        "./src/media/media.stats": {
+            "types": "./dist/src/media/media.stats.d.ts",
+            "default": "./dist/src/media/media.stats.js"
+        }
     }
 }
