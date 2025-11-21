@@ -52,7 +52,6 @@ export interface TriviaQuestion {
     category: string;
     difficulty: 'easy' | 'medium' | 'hard';
     correct_answer: number;
-    explanation: string;
 }
 
 export interface TriviaData {
