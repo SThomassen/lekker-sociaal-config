@@ -13,7 +13,6 @@ exports.sportsQuestions = {
             correct_answer: 1,
             category: 'sports',
             difficulty: 'easy',
-            explanation: 'Paris has been the capital of France since the 6th century.',
         },
         {
             id: 'q002',
@@ -22,7 +21,6 @@ exports.sportsQuestions = {
             correct_answer: 2,
             category: 'sports',
             difficulty: 'easy',
-            explanation: 'Leonardo da Vinci painted the Mona Lisa between 1503-1519.',
         },
         {
             id: 'q003',
@@ -31,7 +29,6 @@ exports.sportsQuestions = {
             correct_answer: 2,
             category: 'sports',
             difficulty: 'easy',
-            explanation: 'Jupiter is the largest planet in our solar system by both mass and volume.',
         },
         {
             id: 'q004',
@@ -40,7 +37,6 @@ exports.sportsQuestions = {
             correct_answer: 0,
             category: 'sports',
             difficulty: 'easy',
-            explanation: 'Berlin has been the capital of Germany since the 13th century.',
         }
     ]
 };
