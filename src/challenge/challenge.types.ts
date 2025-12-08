@@ -2,6 +2,7 @@ import { CommandConfig } from "../command/command.types";
 
 export interface ChallengeConfig {
     enable: boolean;
+    challenges_channel?: string;
     add: CommandConfig;
     remove: CommandConfig;
     update: CommandConfig;
@@ -12,6 +13,7 @@ export interface ChallengeConfig {
 }
 
 export interface Challenge {
+    id: string; // UUID
     name: string;
     description: string;
     time_limit?: number;

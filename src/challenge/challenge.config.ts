@@ -2,6 +2,7 @@ import { ChallengeConfig } from "./challenge.types";
 
 export const defaultChallengeConfig: ChallengeConfig = {
     enable: true,
+    challenges_channel: 'challenges',
     add: {
         enable: true,
         cooldown: 0,
