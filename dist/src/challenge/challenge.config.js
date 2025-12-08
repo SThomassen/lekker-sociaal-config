@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultChallengeConfig = void 0;
 exports.defaultChallengeConfig = {
     enable: true,
+    challenges_channel: 'challenges',
     add: {
         enable: true,
         cooldown: 0,
