@@ -1,3 +1,5 @@
+import { CommandConfig } from "../command/command.types";
+
 export interface Event {
     enable: boolean;
     name: string;
@@ -23,4 +25,12 @@ export interface Event {
 
 export interface EventsData {
     events: Event[];
+}
+
+export interface EventConfig {
+    enable: boolean;
+    list: CommandConfig;
+    trigger: CommandConfig;
+    start: CommandConfig;
+    stop: CommandConfig;
 }

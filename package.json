@@ -232,6 +232,10 @@
             "types": "./dist/src/sanitization/sanitization.types.d.ts",
             "default": "./dist/src/sanitization/sanitization.types.js"
         },
+        "./src/event/event.config": {
+            "types": "./dist/src/event/event.config.d.ts",
+            "default": "./dist/src/event/event.config.js"
+        },
         "./src/event/event.data": {
             "types": "./dist/src/event/event.data.d.ts",
             "default": "./dist/src/event/event.data.js"
