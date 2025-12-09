@@ -48,10 +48,10 @@ exports.defaultGameConfig = {
     message: {
         channel: '',
         mention_user: true,
-        custom_message: "I LOST THE GAME!",
+        custom_message: "YOU LOST THE GAME!",
         cooldown: 300000, // 5 minutes in milliseconds
         reaction_emoji: "😈",
-        timeout_seconds: 0 // Default to permanent messages
+        timeout_seconds: 60 // 1 minute in seconds
     }
 };
 //# sourceMappingURL=game.config.js.map
