@@ -4,6 +4,7 @@ exports.defaultEventsData = void 0;
 exports.defaultEventsData = {
     events: [{
             enable: true,
+            id: 'music_monday',
             name: 'Music Monday',
             channel: 'music-monday',
             post_time: '10:00',

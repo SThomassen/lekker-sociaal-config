@@ -2,6 +2,7 @@ import { CommandConfig } from "../command/command.types";
 
 export interface Event {
     enable: boolean;
+    id: string;
     name: string;
     channel: string;
     post_time: string;
