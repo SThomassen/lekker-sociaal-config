@@ -3,6 +3,7 @@ export interface Event {
     enable: boolean;
     id: string;
     name: string;
+    description: string;
     channel: string;
     post_time: string;
     timezone: string;

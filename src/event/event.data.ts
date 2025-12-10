@@ -5,6 +5,7 @@ export const defaultEventsData: EventsData = {
         enable: true,
         id: 'music_monday',
         name: 'Music Monday',
+        description: 'Discover new music every Monday',
         channel: 'music-monday',
         post_time: '10:00',
         timezone: 'Europe/Amsterdam',
