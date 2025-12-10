@@ -6,6 +6,8 @@ export interface Event {
     description: string;
     channel: string;
     post_time: string;
+    post_day: number;
+    frequency: 'daily' | 'weekly' | 'monthly';
     timezone: string;
     search_terms: string[];
     filters: {

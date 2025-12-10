@@ -9,6 +9,8 @@ exports.defaultEventsData = {
             description: 'Discover new music every Monday',
             channel: 'music-monday',
             post_time: '10:00',
+            post_day: 1, // Monday (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+            frequency: 'weekly',
             timezone: 'Europe/Amsterdam',
             search_terms: [
                 'music', 'song', 'new music', 'indie music', 'rock music', 'pop music',
