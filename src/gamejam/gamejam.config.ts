@@ -18,6 +18,30 @@ export const defaultGameJamConfig: GameJamConfig = {
         min_duration_days: 1,
         default_theme_pool: 'default'
     },
+    pools: {
+        enable: true,
+        cooldown: 0,
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
+        ephemeral: true
+    },
+    themes: {
+        enable: true,
+        cooldown: 0,
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
+        ephemeral: true
+    },
     status: {
         enable: true,
         cooldown: 0,

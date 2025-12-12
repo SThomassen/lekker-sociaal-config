@@ -45,6 +45,8 @@ export interface GameJamConfig {
         min_duration_days: number;
         default_theme_pool: string; // Which theme pool to use by default
     };
+    pools: CommandConfig;
+    themes: CommandConfig;
     status: CommandConfig;
     join: CommandConfig;
     end: CommandConfig & {
