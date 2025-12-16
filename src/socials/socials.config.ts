@@ -1,7 +1,7 @@
 import { SocialConfig } from "./socials.types";
 
 export const defaultSocialConfig: SocialConfig = {
-    enable: true,
+    enable: false,
     stats: {
         enable: true,
         cooldown: 0,

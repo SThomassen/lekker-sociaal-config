@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultLevelingConfig = void 0;
 exports.defaultLevelingConfig = {
-    enable: true,
+    enable: false,
     xp_values: {
         message: 2,
         reaction_given: 1,

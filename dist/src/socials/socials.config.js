@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultSocialConfig = void 0;
 exports.defaultSocialConfig = {
-    enable: true,
+    enable: false,
     stats: {
         enable: true,
         cooldown: 0,

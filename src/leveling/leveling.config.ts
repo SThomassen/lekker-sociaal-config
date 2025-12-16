@@ -1,7 +1,7 @@
 import { LevelingConfig } from "./leveling.types";
 
 export const defaultLevelingConfig: LevelingConfig = {
-    enable: true,
+    enable: false,
     xp_values: {
         message: 2,
         reaction_given: 1,
