@@ -51,7 +51,7 @@ exports.defaultGameConfig = {
         custom_message: "YOU LOST THE GAME!",
         cooldown: 300000, // 5 minutes in milliseconds
         reaction_emoji: "😈",
-        timeout_seconds: 60 // 1 minute in seconds
+        timeout_seconds: 10 // 10 seconds in seconds
     }
 };
 //# sourceMappingURL=game.config.js.map
