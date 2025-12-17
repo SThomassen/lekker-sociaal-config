@@ -86,5 +86,17 @@ export const defaultChallengeConfig: ChallengeConfig = {
             response_channel: '',
         },
         ephemeral: true
+    },
+    stats: {
+        enable: true,
+        cooldown: 0,
+        permissions: {
+            allowed_roles: ['@everyone'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
+        ephemeral: true
     }
 };

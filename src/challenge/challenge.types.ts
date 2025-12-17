@@ -10,6 +10,7 @@ export interface ChallengeConfig {
     get: CommandConfig;
     random: CommandConfig;
     admin: CommandConfig;
+    stats: CommandConfig;
 }
 
 export interface Challenge {
