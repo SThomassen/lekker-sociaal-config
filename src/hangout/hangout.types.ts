@@ -31,3 +31,14 @@ export interface HangoutActivityMessage {
     show_current_playlist_duration: boolean;
     show_current_playlist_progress: boolean;
 }
+
+export interface HangoutClientLink {
+    id: number;
+    guild_id: string;
+    hangout_client_id: string;
+    discord_user_id: string;
+    client_name: string;
+    room_url: string;
+    createdAt: Date;
+    updatedAt: Date;
+}

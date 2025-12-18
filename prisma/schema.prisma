@@ -290,3 +290,19 @@ model Event {
   @@map("events")
 }
 
+// Hangout FM System Models
+model HangoutClientLink {
+  id              Int      @id @default(autoincrement())
+  guild_id        String   @db.VarChar(255)
+  hangout_client_id String @db.VarChar(255) @unique
+  discord_user_id String   @db.VarChar(255)
+  client_name     String   @db.VarChar(255)
+  room_url        String   @db.VarChar(1000)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([guild_id])
+  @@index([discord_user_id])
+  @@map("hangout_client_links")
+}
+
