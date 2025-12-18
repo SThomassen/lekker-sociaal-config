@@ -1,9 +1,9 @@
 import { HangoutActivityMessage, HangoutConfig } from "./hangout.types";
 
 export const defaultHangoutConfig: HangoutConfig = {
-    room_url: '',
-    channel: 'general',
-    role_assign: '',
+    room_url: 'https://hang.fm/da/lekker-muziek-6452',
+    channel: 'hangout',
+    role_assign: 'Lekker luisteren',
     presence_dynamic: true,
     presence_text: 'Listening to Hangout',
     auto_update: true,
