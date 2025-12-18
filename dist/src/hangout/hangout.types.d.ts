@@ -1,5 +1,7 @@
 export interface HangoutConfig {
     room_url: string;
+    room_uuid?: string;
+    hangout_token?: string;
     channel: string;
     role_assign: string;
     presence_dynamic: boolean;

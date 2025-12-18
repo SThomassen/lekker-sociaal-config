@@ -1,5 +1,7 @@
 export interface HangoutConfig {
     room_url: string;
+    room_uuid?: string; // The room UUID for socket connection (optional, can be extracted from room_url)
+    hangout_token?: string; // JWT token for Hangout FM authentication (optional)
     channel: string; // The channel to send the hangout message to
     role_assign: string; // The role to assign to the users who are listening to the hangout
     presence_dynamic: boolean; // If true, the bot will update the presence text based on the hangout activity
