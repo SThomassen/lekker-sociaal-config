@@ -16,6 +16,7 @@ export interface HangoutConfig {
 export interface HangoutActivity {
     room: string;
     current_song: string;
+    current_song_thumbnail?: string;
     current_dj: string;
     current_listeners: string[];
     current_playlist: string;
