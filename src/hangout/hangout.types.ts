@@ -16,13 +16,20 @@ export interface HangoutConfig {
 
 export interface HangoutActivity {
     room: string;
-    current_song: string;
-    current_song_thumbnail?: string;
-    current_dj: string;
-    current_listeners: string[];
-    current_playlist: string;
-    current_playlist_duration: number;
-    current_playlist_progress: number;
+    current_song?: {
+        artist: string;
+        track: string;
+        thumbnail?: string;
+    }
+    current_dj?: {
+        uuid: string;
+        displayName: string;
+    }
+    current_listeners: {
+        uuid: string;
+        displayName: string;
+    }[];
+
 }
 
 export interface HangoutActivityMessage {
@@ -31,9 +38,6 @@ export interface HangoutActivityMessage {
     show_current_song: boolean;
     show_current_dj: boolean;
     show_current_listeners: boolean;
-    show_current_playlist: boolean;
-    show_current_playlist_duration: boolean;
-    show_current_playlist_progress: boolean;
 }
 
 export interface HangoutClientLink {

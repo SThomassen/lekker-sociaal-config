@@ -21,7 +21,4 @@ export const defaultHangoutActivityMessage: HangoutActivityMessage = {
     show_current_song: true,
     show_current_dj: true,
     show_current_listeners: true,
-    show_current_playlist: true,
-    show_current_playlist_duration: true,
-    show_current_playlist_progress: true
 }
