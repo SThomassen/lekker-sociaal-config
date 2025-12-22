@@ -4,6 +4,7 @@ export const defaultHangoutConfig: HangoutConfig = {
     room_url: 'https://hang.fm/da/lekker-muziek-6452',
     room_uuid: 'lekker-muziek-6452', // Extracted from room_url
     channel: 'hangout',
+    moderator_channel: 'hangout-moderator',
     role_assign: 'Lekker luisteren',
     presence_dynamic: true,
     presence_text: 'Listening to Hangout',

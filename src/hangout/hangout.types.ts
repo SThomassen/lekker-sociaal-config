@@ -3,6 +3,7 @@ export interface HangoutConfig {
     room_uuid?: string; // The room UUID for socket connection (optional, can be extracted from room_url)
     hangout_token?: string; // JWT token for Hangout FM authentication (optional)
     channel: string; // The channel to send the hangout message to
+    moderator_channel: string; // The channel to send the moderator messages to
     role_assign: string; // The role to assign to the users who are listening to the hangout
     presence_dynamic: boolean; // If true, the bot will update the presence text based on the hangout activity
     presence_text: string; // The text to display in the presence when presenceDynamic is false
@@ -44,4 +45,16 @@ export interface HangoutClientLink {
     room_url: string;
     createdAt: Date;
     updatedAt: Date;
+}
+
+export interface HangoutUserData {
+    uuid: string;
+    username: string;
+    avatar: string;
+    time_in_room: number;
+    time_as_dj: number;
+    time_as_listener: number;
+    songs_played: number;
+    songs_liked: number;
+    songs_disliked: number;
 }

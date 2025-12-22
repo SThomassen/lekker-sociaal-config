@@ -3,6 +3,7 @@ export interface HangoutConfig {
     room_uuid?: string;
     hangout_token?: string;
     channel: string;
+    moderator_channel: string;
     role_assign: string;
     presence_dynamic: boolean;
     presence_text: string;
@@ -41,5 +42,16 @@ export interface HangoutClientLink {
     room_url: string;
     createdAt: Date;
     updatedAt: Date;
+}
+export interface HangoutUserData {
+    uuid: string;
+    username: string;
+    avatar: string;
+    time_in_room: number;
+    time_as_dj: number;
+    time_as_listener: number;
+    songs_played: number;
+    songs_liked: number;
+    songs_disliked: number;
 }
 //# sourceMappingURL=hangout.types.d.ts.map
