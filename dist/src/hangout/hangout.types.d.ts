@@ -18,13 +18,14 @@ export interface HangoutListener {
     display_name: string;
     discord_user_id?: string;
 }
+export interface HangoutSong {
+    artist: string;
+    track: string;
+    thumbnail?: string;
+}
 export interface HangoutActivity {
     room: string;
-    current_song?: {
-        artist: string;
-        track: string;
-        thumbnail?: string;
-    };
+    current_song?: HangoutSong;
     current_dj?: string;
     current_listeners: {
         [key: string]: HangoutListener;

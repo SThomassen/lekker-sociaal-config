@@ -20,13 +20,15 @@ export interface HangoutListener {
     discord_user_id?: string;
 }
 
+export interface HangoutSong {
+    artist: string;
+    track: string;
+    thumbnail?: string;
+}
+
 export interface HangoutActivity {
     room: string;
-    current_song?: {
-        artist: string;
-        track: string;
-        thumbnail?: string;
-    }
+    current_song?: HangoutSong;
     current_dj?: string; // The UUID of the current DJ, use current_listeners[uuid] to get the displayName
     current_listeners: {
         [key: string]: HangoutListener;
