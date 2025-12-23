@@ -21,14 +21,13 @@ export interface HangoutActivity {
         track: string;
         thumbnail?: string;
     }
-    current_dj?: {
-        uuid: string;
-        displayName: string;
-    }
+    current_dj?: string; // The UUID of the current DJ, use current_listeners[uuid] to get the displayName
     current_listeners: {
-        uuid: string;
-        displayName: string;
-    }[];
+        [key: string]: {
+            uuid: string;
+            displayName: string;
+        }
+    };
 
 }
 

@@ -20,14 +20,13 @@ export interface HangoutActivity {
         track: string;
         thumbnail?: string;
     };
-    current_dj?: {
-        uuid: string;
-        displayName: string;
-    };
+    current_dj?: string;
     current_listeners: {
-        uuid: string;
-        displayName: string;
-    }[];
+        [key: string]: {
+            uuid: string;
+            displayName: string;
+        };
+    };
 }
 export interface HangoutActivityMessage {
     message: string;
