@@ -13,6 +13,11 @@ export interface HangoutConfig {
     join_message: string;
     leave_message: string;
 }
+export interface HangoutListener {
+    uuid: string;
+    display_name: string;
+    discord_user_id?: string;
+}
 export interface HangoutActivity {
     room: string;
     current_song?: {
@@ -22,10 +27,7 @@ export interface HangoutActivity {
     };
     current_dj?: string;
     current_listeners: {
-        [key: string]: {
-            uuid: string;
-            displayName: string;
-        };
+        [key: string]: HangoutListener;
     };
 }
 export interface HangoutActivityMessage {

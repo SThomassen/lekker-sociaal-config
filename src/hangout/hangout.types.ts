@@ -14,6 +14,12 @@ export interface HangoutConfig {
     leave_message: string; // The message to display in the channel when a user leaves the hangout
 }
 
+export interface HangoutListener {
+    uuid: string;
+    display_name: string;
+    discord_user_id?: string;
+}
+
 export interface HangoutActivity {
     room: string;
     current_song?: {
@@ -23,10 +29,7 @@ export interface HangoutActivity {
     }
     current_dj?: string; // The UUID of the current DJ, use current_listeners[uuid] to get the displayName
     current_listeners: {
-        [key: string]: {
-            uuid: string;
-            displayName: string;
-        }
+        [key: string]: HangoutListener;
     };
 
 }
