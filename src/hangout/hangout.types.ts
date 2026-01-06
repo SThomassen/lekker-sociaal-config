@@ -30,10 +30,10 @@ export interface HangoutActivity {
     room: string;
     current_song?: HangoutSong;
     current_dj?: string; // The UUID of the current DJ, use current_listeners[uuid] to get the displayName
-    current_listeners: {
+    current_listeners?: {
         [key: string]: HangoutListener;
     };
-
+    djLineUp?: string[];
 }
 
 export interface HangoutActivityMessage {

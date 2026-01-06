@@ -27,9 +27,10 @@ export interface HangoutActivity {
     room: string;
     current_song?: HangoutSong;
     current_dj?: string;
-    current_listeners: {
+    current_listeners?: {
         [key: string]: HangoutListener;
     };
+    djLineUp?: string[];
 }
 export interface HangoutActivityMessage {
     message: string;
