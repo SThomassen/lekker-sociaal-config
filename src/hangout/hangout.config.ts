@@ -7,7 +7,7 @@ export const defaultHangoutConfig: HangoutConfig = {
     moderator_channel: 'hangout-moderator',
     role_assign: 'Lekker luisteren',
     presence_dynamic: true,
-    presence_text: 'Listening to Hangout',
+    presence_text: 'Join us on Hangout FM',
     auto_update: true,
     auto_update_interval: 10,
     inactive_message: 'No activity in the hangout',
