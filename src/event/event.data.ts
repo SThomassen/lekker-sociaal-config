@@ -1,5 +1,350 @@
 import { EventsData } from "./event.types";
 
+const hiphopTerms = [
+    'hip hop',
+    'hiphop',
+    'rap',
+    'underground hip hop',
+    'conscious rap',
+    'boom bap',
+    'trap',
+    'lofi hip hop',
+    'jazz rap',
+    'alternative hip hop',
+    'rnb',
+    'r&b',
+    'neo soul',
+    'soul',
+    'modern soul',
+    'funk',
+    'funk soul',
+    'soul groove',
+    'contemporary r&b',
+    'urban',
+    'grime',
+    'drill',
+    'mumble rap',
+    'old school hip hop',
+    'new school hip hop'
+]
+
+const bluesTerms = [
+    'blues',
+    'delta blues',
+    'chicago blues',
+    'country blues',
+    'acoustic blues',
+    'southern blues',
+    'electric blues',
+    'blues rock',
+    'modern blues',
+    'jazz',
+    'smooth jazz',
+    'jazz fusion',
+    'nu jazz',
+    'vocal jazz',
+    'jazz trio',
+    'jazz quartet',
+    'bebop',
+    'cool jazz',
+    'hard bop',
+    'free jazz',
+    'acid jazz',
+    'latin jazz',
+    'jazz funk',
+    'modern jazz',
+    'contemporary jazz',
+    'swing',
+    'big band'
+]
+
+const countryTerms = [
+    'country',
+    'honky tonk',
+    'country pop',
+    'country rock',
+    'nashville sound',
+    'bakersfield sound',
+    'country blues',
+    'western swing',
+    'new country',
+    'alt country',
+    'outlaw country',
+    'country folk',
+    'bluegrass country'
+]
+
+const reggaeTerms = [
+    'reggae',
+    'roots reggae',
+    'dub',
+    'dub reggae',
+    'dancehall',
+    'ska',
+    'ska punk',
+    'rocksteady',
+    'reggaeton',
+    'dancehall reggae'
+]
+
+const latinTerms = [
+    'latin',
+    'latin pop',
+    'latin rock',
+    'latin indie',
+    'salsa',
+    'cumbia',
+    'bachata',
+    'merengue',
+    'afrobeat',
+    'afrobeats',
+    'afro pop',
+    'afro soul',
+    'bossa nova',
+    'samba',
+    'pagode',
+    'latin jazz',
+    'flamenco',
+    'tango',
+    'bolero'
+]
+
+const electronicTerms = [
+    'tech house',
+    'minimal techno',
+    'hard techno',
+    'industrial techno',
+    'trance',
+    'progressive trance',
+    'psytrance',
+    'drum and bass',
+    'dnb',
+    'liquid dnb',
+    'jungle',
+    'garage',
+    'uk garage',
+    '2 step',
+    'disco',
+    'electro',
+    'synthpop',
+    'EDM',
+    'big room',
+    'future house',
+    'bass house',
+    'progressive house',
+    'melodic techno',
+    'acid house',
+    'detroit techno',
+    'berlin techno'
+]
+
+const rockTerms = [
+    'rock',
+    'rock n roll',
+    'rock and roll',
+    'rockabilly',
+    'rockabilly revival',
+    'rock and roll revival',
+    'garage rock',
+    'psychedelic rock',
+    'progressive rock',
+    'punk rock',
+    'post-punk',
+    'noise rock',
+    'alternative metal',
+    'alternative rock',
+    'indie rock',
+    'soft rock',
+    'hard rock',
+    'grunge',
+    'post-grunge',
+    'stoner rock',
+    'desert rock',
+    'southern rock',
+    'classic rock',
+    'arena rock',
+    'glam rock'
+]
+
+const punkTerms = [
+    'punk',
+    'hardcore punk',
+    'post hardcore',
+    'emo',
+    'emo revival',
+    'metal',
+    'heavy metal',
+    'doom metal',
+    'black metal',
+    'death metal',
+    'sludge metal',
+    'alternative metal',
+    'thrash metal',
+    'power metal',
+    'progressive metal',
+    'nu metal',
+    'metalcore',
+    'deathcore'
+]
+
+const folkTerms = [
+    'folk',
+    'folk rock',
+    'indie folk',
+    'americana',
+    'alt country',
+    'country',
+    'outlaw country',
+    'bluegrass',
+    'traditional folk',
+    'contemporary folk',
+    'celtic folk',
+    'irish folk',
+    'british folk'
+]
+
+const experimentalTerms = [
+    'experimental',
+    'avant garde',
+    'noise',
+    'free improvisation',
+    'sound art',
+    'field recording',
+    'ambient drone',
+    'dark ambient',
+    'neo classical',
+    'modern classical',
+    'minimalism',
+    'microtonal',
+    'electroacoustic'
+]
+
+const worldMusicTerms = [
+    'world music',
+    'middle eastern',
+    'arabic music',
+    'indian classical',
+    'carnatic',
+    'hindustani',
+    'african traditional',
+    'african music',
+    'gamelan',
+    'korean traditional',
+    'japanese traditional',
+    'chinese traditional'
+]
+
+const popTerms = [
+    'pop',
+    'synth pop',
+    'art pop',
+    'indie pop',
+    'dream pop',
+    'bedroom pop',
+    'bubblegum pop',
+    'dance pop',
+    'electropop',
+    'indie pop rock'
+]
+
+const additionalGenreTerms = [
+    'gospel',
+    'spiritual',
+    'new age',
+    'ambient pop',
+    'chillout',
+    'downtempo'
+]
+
+const contextTerms = [
+    'song',
+    'new music',
+    'cover song',
+    'original song',
+    'emerging artist',
+    'new artist',
+    'underground artist',
+    'new release',
+    'debut single',
+    'first single',
+    'first EP',
+    'new track',
+    'latest track',
+    'fresh release',
+    'unsigned artist',
+    'independent artist',
+    'DIY artist',
+    'upcoming artist',
+    'breakout artist',
+    'underrated artist',
+    'unknown artist',
+    'remix',
+    'music video',
+    'live performance',
+    'studio session',
+    'collaboration',
+    'artist feature',
+    'guest feature',
+    'new album',
+    'EP release',
+    'album release',
+    'single release',
+    'new single',
+    'latest single',
+    'new EP',
+    'album announcement',
+    'record release',
+    'label release',
+    'independent release',
+    'original track',
+    'live session',
+    'live studio',
+    'bedroom session',
+    'home recording',
+    'acoustic session',
+    'one take',
+    'stripped',
+    'demo version'
+]
+
+const moodTerms = [
+    'chill',
+    'moody',
+    'melancholic',
+    'dark',
+    'happy',
+    'upbeat',
+    'energetic',
+    'laid back',
+    'cinematic',
+    'atmospheric',
+    'minimal',
+    'emotional',
+    'introspective',
+    'nostalgic',
+    'euphoric',
+    'relaxing',
+    'uplifting',
+    'intense',
+    'mellow',
+    'dreamy',
+    'ethereal'
+]
+
+const styleTerms = [
+    'lo-fi',
+    'trip hop',
+    'chillwave',
+    'vaporwave',
+    'shoegaze',
+    'post-rock',
+    'synthwave',
+    'retrowave',
+    'outrun',
+    'darkwave',
+    'new wave'
+]
+
 export const defaultEventsData: EventsData = {
     events: [{
         enable: true,
@@ -12,13 +357,38 @@ export const defaultEventsData: EventsData = {
         frequency: 'weekly',
         timezone: 'Europe/Amsterdam',
         search_terms: [
-            'music', 'song', 'new music', 'indie music', 'rock music', 'pop music',
-            'electronic music', 'jazz music', 'classical music', 'folk music',
-            'alternative music', 'ambient music', 'chill music', 'upbeat music',
-            'acoustic music', 'instrumental music', 'vocal music', 'cover song',
-            'original music', 'underground music', 'emerging artist', 'new artist',
-            'indie rock', 'indie pop', 'lo-fi music', 'synthwave', 'dream pop',
-            'post-rock', 'shoegaze', 'indie folk', 'chillwave', 'bedroom pop'
+            // Context terms
+            ...contextTerms,
+            
+            // Main genre categories
+            ...hiphopTerms,
+            ...bluesTerms,
+            ...countryTerms,
+            ...reggaeTerms,
+            ...latinTerms,
+            ...electronicTerms,
+            ...rockTerms,
+            ...punkTerms,
+            ...folkTerms,
+            ...experimentalTerms,
+            ...worldMusicTerms,
+            ...popTerms,
+            ...additionalGenreTerms,
+            
+            // General genre terms
+            'rock',
+            'pop',
+            'indie',
+            'electronic',
+            'folk',
+            'jazz',
+            'classical',
+            'alternative',
+            'experimental',
+            
+            // Style/mood terms
+            ...styleTerms,
+            ...moodTerms,
         ],
         filters: {
             blacklist: {
