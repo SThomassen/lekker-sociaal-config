@@ -29,6 +29,13 @@ export interface GameUser {
     total_games: number;
     total_triggers: number;
     time_since_last_trigger: number; // timestamp in milliseconds
+    current_score: number;
+    peak_score: number;
+    total_losses: number;
+    last_loss_at: number; // timestamp in milliseconds
+    last_message_at: number; // timestamp in milliseconds
+    messages_today: number;
+    last_message_date?: string; // YYYY-MM-DD format
 }
 
 export interface GameStats {

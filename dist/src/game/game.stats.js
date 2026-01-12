@@ -1,6 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.defaultGameStats = void 0;
+exports.defaultGameStats = exports.defaultGameUser = void 0;
+exports.defaultGameUser = {
+    user_id: '',
+    username: '',
+    total_games: 0,
+    total_triggers: 0,
+    time_since_last_trigger: 0,
+    current_score: 0,
+    peak_score: 0,
+    total_losses: 0,
+    last_loss_at: 0,
+    last_message_at: 0,
+    messages_today: 0,
+    last_message_date: undefined
+};
 exports.defaultGameStats = {
     users: {},
     leaderboards: {
