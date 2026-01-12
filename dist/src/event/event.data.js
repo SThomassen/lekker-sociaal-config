@@ -341,10 +341,7 @@ exports.defaultEventsData = {
             post_day: 1, // Monday (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
             frequency: 'weekly',
             timezone: 'Europe/Amsterdam',
-            search_terms: [
-                // Context terms
-                ...contextTerms,
-                // Main genre categories
+            genre_terms: [
                 ...hiphopTerms,
                 ...bluesTerms,
                 ...countryTerms,
@@ -358,6 +355,7 @@ exports.defaultEventsData = {
                 ...worldMusicTerms,
                 ...popTerms,
                 ...additionalGenreTerms,
+                ...styleTerms,
                 // General genre terms
                 'rock',
                 'pop',
@@ -368,10 +366,9 @@ exports.defaultEventsData = {
                 'classical',
                 'alternative',
                 'experimental',
-                // Style/mood terms
-                ...styleTerms,
-                ...moodTerms,
             ],
+            mood_terms: moodTerms,
+            context_terms: contextTerms,
             filters: {
                 blacklist: {
                     artists: ['Shakira'],

@@ -10,7 +10,9 @@ export interface Event {
     post_day: number;
     frequency: 'daily' | 'weekly' | 'monthly';
     timezone: string;
-    search_terms: string[];
+    genre_terms: string[];
+    mood_terms: string[];
+    context_terms: string[];
     filters: {
         blacklist: {
             artists: string[];
