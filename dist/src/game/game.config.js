@@ -28,6 +28,19 @@ exports.defaultGameConfig = {
         ephemeral: true,
         max_entries: 10
     },
+    peak: {
+        enable: true,
+        cooldown: 0,
+        permissions: {
+            allowed_roles: ['Administrator', 'Moderator'],
+            ignored_roles: [],
+            allowed_channels: [],
+            ignored_channels: [],
+            response_channel: '',
+        },
+        ephemeral: true,
+        max_entries: 10
+    },
     stats: {
         enable: true,
         cooldown: 0,

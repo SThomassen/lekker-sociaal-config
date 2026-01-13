@@ -6,6 +6,9 @@ export interface GameConfig {
     leaderboard: CommandConfig & {
         max_entries: number;
     };
+    peak: CommandConfig & {
+        max_entries: number;
+    };
     stats: CommandConfig & {
         show_user_triggers: boolean;
     };
