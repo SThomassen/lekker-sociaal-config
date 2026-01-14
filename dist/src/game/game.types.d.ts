@@ -37,6 +37,7 @@ export interface GameUser {
     last_message_at: number;
     messages_today: number;
     last_message_date?: string;
+    messages_since_last_loss: number;
 }
 export interface GameStats {
     users: {

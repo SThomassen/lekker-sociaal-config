@@ -12,7 +12,8 @@ export const defaultGameUser: GameUser = {
     last_loss_at: 0,
     last_message_at: 0,
     messages_today: 0,
-    last_message_date: undefined
+    last_message_date: undefined,
+    messages_since_last_loss: 0
 };
 
 export const defaultGameStats: GameStats = {

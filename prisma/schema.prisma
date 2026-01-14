@@ -117,6 +117,7 @@ model GameUser {
   last_loss_at           BigInt   @default(0)
   last_message_at        BigInt   @default(0)
   messages_today         Int      @default(0)
+  messages_since_last_loss Int    @default(0)
   last_message_date      String?  @db.VarChar(10) // YYYY-MM-DD format
   updatedAt              DateTime @updatedAt
   createdAt              DateTime @default(now())

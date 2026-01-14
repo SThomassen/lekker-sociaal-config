@@ -39,6 +39,7 @@ export interface GameUser {
     last_message_at: number; // timestamp in milliseconds
     messages_today: number;
     last_message_date?: string; // YYYY-MM-DD format
+    messages_since_last_loss: number;
 }
 
 export interface GameStats {
