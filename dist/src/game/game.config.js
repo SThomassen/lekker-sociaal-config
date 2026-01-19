@@ -56,7 +56,7 @@ exports.defaultGameConfig = {
     },
     message_detection: {
         enable: true,
-        trigger_keywords: ['game'],
+        trigger_keywords: ['game', 'spel'],
     },
     message: {
         channel: '',
