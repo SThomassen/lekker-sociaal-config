@@ -5,7 +5,7 @@ exports.defaultGameUser = {
     user_id: '',
     username: '',
     total_triggers: 0,
-    current_score: 0,
+    last_score: 0,
     peak_score: 0,
     last_trigger_at: 0,
     last_message_at: 0,

@@ -30,7 +30,7 @@ export interface GameUser {
     user_id: string;
     username: string;
     total_triggers: number;
-    current_score: number; // minutes survived since last trigger (calculated, not stored)
+    last_score: number; // minutes survived since last trigger (calculated, not stored)
     peak_score: number; // highest minutes survived ever (stored)
     last_trigger_at: number; // timestamp in milliseconds
     last_message_at: number; // timestamp in milliseconds

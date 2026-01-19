@@ -28,7 +28,7 @@ export interface GameUser {
     user_id: string;
     username: string;
     total_triggers: number;
-    current_score: number;
+    last_score: number;
     peak_score: number;
     last_trigger_at: number;
     last_message_at: number;
