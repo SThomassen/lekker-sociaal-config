@@ -29,16 +29,12 @@ export interface GameConfig {
 export interface GameUser {
     user_id: string;
     username: string;
-    total_games: number;
     total_triggers: number;
-    time_since_last_trigger: number; // timestamp in milliseconds
-    current_score: number;
-    peak_score: number;
-    total_losses: number;
-    last_loss_at: number; // timestamp in milliseconds
+    current_score: number; // minutes survived since last trigger (calculated, not stored)
+    peak_score: number; // highest minutes survived ever (stored)
+    last_trigger_at: number; // timestamp in milliseconds
     last_message_at: number; // timestamp in milliseconds
     messages_today: number;
-    last_message_date?: string; // YYYY-MM-DD format
     messages_since_last_loss: number;
 }
 

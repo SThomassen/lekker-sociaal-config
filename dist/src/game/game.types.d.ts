@@ -27,16 +27,12 @@ export interface GameConfig {
 export interface GameUser {
     user_id: string;
     username: string;
-    total_games: number;
     total_triggers: number;
-    time_since_last_trigger: number;
     current_score: number;
     peak_score: number;
-    total_losses: number;
-    last_loss_at: number;
+    last_trigger_at: number;
     last_message_at: number;
     messages_today: number;
-    last_message_date?: string;
     messages_since_last_loss: number;
 }
 export interface GameStats {
