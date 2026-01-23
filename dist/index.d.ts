@@ -14,4 +14,5 @@ export * from './src/sanitization';
 export * from './src/socials';
 export * from './src/styling';
 export * from './src/trivia';
+export * from './src/image';
 //# sourceMappingURL=index.d.ts.map
