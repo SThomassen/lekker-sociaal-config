@@ -19,7 +19,7 @@ exports.defaultGameConfig = {
         enable: true,
         cooldown: 0,
         permissions: {
-            allowed_roles: ['Administrator', 'Moderator'],
+            allowed_roles: ['@everyone'],
             ignored_roles: [],
             allowed_channels: [],
             ignored_channels: [],
@@ -32,7 +32,7 @@ exports.defaultGameConfig = {
         enable: true,
         cooldown: 0,
         permissions: {
-            allowed_roles: ['Administrator', 'Moderator'],
+            allowed_roles: ['@everyone'],
             ignored_roles: [],
             allowed_channels: [],
             ignored_channels: [],
@@ -45,7 +45,7 @@ exports.defaultGameConfig = {
         enable: true,
         cooldown: 0,
         permissions: {
-            allowed_roles: ['Administrator', 'Moderator'],
+            allowed_roles: ['@everyone'],
             ignored_roles: [],
             allowed_channels: [],
             ignored_channels: [],

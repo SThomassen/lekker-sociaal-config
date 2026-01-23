@@ -148,6 +148,14 @@
             "types": "./dist/src/game/game.stats.d.ts",
             "default": "./dist/src/game/game.stats.js"
         },
+        "./src/image/image.types": {
+            "types": "./dist/src/image/image.types.d.ts",
+            "default": "./dist/src/image/image.types.js"
+        },
+        "./src/image/image.config": {
+            "types": "./dist/src/image/image.config.d.ts",
+            "default": "./dist/src/image/image.config.js"
+        },
         "./src/styling/styling.config": {
             "types": "./dist/src/styling/styling.config.d.ts",
             "default": "./dist/src/styling/styling.config.js"
