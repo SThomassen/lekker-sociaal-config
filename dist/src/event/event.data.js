@@ -9,7 +9,7 @@ const hiphopTerms = [
     'conscious rap',
     'boom bap',
     'trap',
-    'lofi hip hop',
+    'lofi',
     'jazz rap',
     'alternative hip hop',
     'rnb',
@@ -26,7 +26,8 @@ const hiphopTerms = [
     'drill',
     'mumble rap',
     'old school hip hop',
-    'new school hip hop'
+    'new school hip hop',
+    'trip hop',
 ];
 const bluesTerms = [
     'blues',
