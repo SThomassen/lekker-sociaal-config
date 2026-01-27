@@ -32,6 +32,10 @@
             "types": "./dist/src/ping/ping.types.d.ts",
             "default": "./dist/src/ping/ping.types.js"
         },
+        "./src/steam/steam.types": {
+            "types": "./dist/src/steam/steam.types.d.ts",
+            "default": "./dist/src/steam/steam.types.js"
+        },
         "./src/general/general.config": {
             "types": "./dist/src/general/general.config.d.ts",
             "default": "./dist/src/general/general.config.js"
