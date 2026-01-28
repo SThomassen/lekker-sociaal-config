@@ -10,7 +10,7 @@ export interface RequestSteamAPIProps {
     params?: Record<string, any>;
 }
 
-export interface LinkedUser {
+export interface SteamUser {
     id: string;
     username: string;
     steamid: string;
@@ -28,7 +28,7 @@ export interface OwnedGame {
 }
 
 export interface OwnedGamesPerUser {
-    user: LinkedUser;
+    user: SteamUser;
     games: OwnedGame[];
 }
 
