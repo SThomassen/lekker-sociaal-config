@@ -1,9 +1,25 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 const packageJsonPath = path.join(__dirname, '..', 'package.json');
 const distSrcPath = path.join(__dirname, '..', 'dist', 'src');
+
+/** Recursively find all .js files under dir, returns paths relative to dist/ */
+function findJsFiles(dir, baseDir = dir) {
+  const results = [];
+  if (!fs.existsSync(dir)) return results;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...findJsFiles(fullPath, baseDir));
+    } else if (entry.name.endsWith('.js')) {
+      const relative = path.relative(baseDir, fullPath).replace(/\\/g, '/');
+      results.push(relative);
+    }
+  }
+  return results;
+}
 
 // Read package.json
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -17,16 +33,13 @@ const packageExports = {
 };
 
 if (fs.existsSync(distSrcPath)) {
-  const files = execSync(`find dist/src -name "*.js" -type f`, { cwd: path.join(__dirname, '..'), encoding: 'utf8' })
-    .trim()
-    .split('\n')
-    .filter(Boolean);
+  const files = findJsFiles(distSrcPath);
 
   for (const file of files) {
-    const relativePath = file.replace('dist/', '').replace('.js', '');
-    packageExports[`./${relativePath}`] = {
-      types: `./dist/${relativePath}.d.ts`,
-      default: `./dist/${relativePath}.js`
+    const relativePath = file.replace(/^src\//, '').replace('.js', '');
+    packageExports[`./src/${relativePath}`] = {
+      types: `./dist/src/${relativePath}.d.ts`,
+      default: `./dist/src/${relativePath}.js`
     };
   }
 }

@@ -28,6 +28,7 @@ __exportStar(require("./src/notification"), exports);
 __exportStar(require("./src/ping"), exports);
 __exportStar(require("./src/sanitization"), exports);
 __exportStar(require("./src/socials"), exports);
+__exportStar(require("./src/steam"), exports);
 __exportStar(require("./src/styling"), exports);
 __exportStar(require("./src/trivia"), exports);
 __exportStar(require("./src/image"), exports);
