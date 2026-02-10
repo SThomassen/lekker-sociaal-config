@@ -95,5 +95,7 @@ export interface TriviaUser {
             accuracy: number;
         };
     };
+    quizzes_joined: number;
+    quizzes_won: number;
 }
 //# sourceMappingURL=trivia.types.d.ts.map

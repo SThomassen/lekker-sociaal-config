@@ -79,4 +79,6 @@ export interface TriviaUser {
     accuracy: number;
     category_stats: { [category: string]: { total: number; correct: number, accuracy: number } };
     difficulty_stats: { [difficulty: string]: { total: number; correct: number, accuracy: number } };
+    quizzes_joined: number;
+    quizzes_won: number;
 }
