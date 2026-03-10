@@ -31,6 +31,14 @@ export interface HangoutActivity {
         [key: string]: HangoutListener;
     };
     djLineUp?: string[];
+    djNextSongs?: {
+        [uuid: string]: HangoutSong;
+    };
+    voteCounts?: {
+        likes: number;
+        dislikes: number;
+        stars: number;
+    };
 }
 export interface HangoutActivityMessage {
     message: string;
